@@ -44,13 +44,12 @@ public class Test {
         b_count++;
     }
 
-    public static synchronized String getICount() {
+    public static synchronized int getICount() {
         return i_count;
     }
 
     public static synchronized void mcount(int incr) {
         m_count++;
     }
-
 }
 

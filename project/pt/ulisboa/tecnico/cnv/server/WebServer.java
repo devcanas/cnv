@@ -96,7 +96,7 @@ public class WebServer {
 
 			//Solve sudoku puzzle
 			JSONArray solution = s.solveSudoku();
-			getRequestMetrics();
+			logRequestMetrics();
 
 			// Send response to browser.
 			final Headers hdrs = t.getResponseHeaders();
@@ -128,9 +128,22 @@ public class WebServer {
 		}
 	}
 
-	public static void getRequestMetrics(){
-		int icount = instrumentation.getICount();
-		System.out.println("ICount: " + icount);
-	}
+	public static void logRequestMetrics(){
+		// gets the working dir to save the logs to
+		String dir = System.getProperty("user.dir");
 
+		// sets up the metrics to be logged
+		Thread thread = Thread.currentThread();
+		int icount = instrumentation.getICount();
+
+		// logs metrics
+		try {
+			Writer fileWriter = new FileWriter(dir + "/log.txt", false);
+			fileWriter.write("Thread Id: \t" + thread.getId() + "\n");
+			fileWriter.write("ICount: \t" + icount + "\n");
+			fileWriter.close();
+		} catch (IOException e) {
+			System.out.print(e.getStackTrace());
+		}
+	}
 }

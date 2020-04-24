@@ -1,9 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="14ab684e-290c-4417-951c-39640b6fbbb8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BIT/BIT/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/BIT/BIT/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BIT/BIT/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/BIT/BIT/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/AbstractSudokuSolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/AbstractSudokuSolver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SampleParserMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SampleParserMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/Solver.class" beforeDir="false" afterPath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/Solver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters.class" beforeDir="false" afterPath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType.class" beforeDir="false" afterPath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SolverFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SolverFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SolverMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SolverMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SudokuSolverBFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SudokuSolverBFS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SudokuSolverCP.class" beforeDir="false" afterPath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SudokuSolverCP.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$ColumnID.class" beforeDir="false" afterPath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$ColumnID.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$ColumnNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$ColumnNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX.class" beforeDir="false" afterPath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/pt/ulisboa/tecnico/cnv/server/WebServer$MyHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/project/pt/ulisboa/tecnico/cnv/server/WebServer$MyHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/pt/ulisboa/tecnico/cnv/server/WebServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/project/pt/ulisboa/tecnico/cnv/server/WebServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/pt/ulisboa/tecnico/cnv/server/WebServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/pt/ulisboa/tecnico/cnv/server/WebServer.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1azE2w8moL21Dbu6MwIxXi7Tqdx" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="14ab684e-290c-4417-951c-39640b6fbbb8" name="Default Changelist" comment="" />
+      <created>1587729820081</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587729820081</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2093" y="372" key="com.intellij.ide.util.TipDialog" timestamp="1587729824154">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2093" y="372" key="com.intellij.ide.util.TipDialog/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1587729824154" />
   </component>
   <component name="masterDetails">
     <states>
