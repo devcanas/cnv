@@ -1,2 +1,1139 @@
-Thread Id: 	12
-ICount: 	78240257
+
+Thread: 	13
+Branch summary:
+CLASS NAME	METHOD	PC	TAKEN	NOT_TAKEN
+139
+pt/ulisboa/tecnico/cnv/solver/Solver	print	77	2	18
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	173	12	4
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	162	2	16
+pt/ulisboa/tecnico/cnv/solver/Solver	print	88	18	162
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	124	108	36
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	113	18	144
+pt/ulisboa/tecnico/cnv/solver/Solver	print	52	2	42
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	9	162	0
+pt/ulisboa/tecnico/cnv/solver/Solver	deepCloneArray	18	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	69	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	87	9	81
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	183	9	81
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	156	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	113	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	deepCloneArray	23	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	run	35	3808	39984000
+pt/ulisboa/tecnico/cnv/solver/Solver	run	24	136	3808
+pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType	toString	795	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	769	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	684	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	665	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	538	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	500	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	390	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	356	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	261	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	182	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	168	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	156	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	27	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	15	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType	values	11	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType	toString	28	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory	getInstance	3	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory	toString	9	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	6	40	840
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	18	744	96
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	6	25	312
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	18	297	15
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	30	24	75
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	45	74	225
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	59	224	1
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	25	1	24
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	15	15	25
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	6	96	40
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	6	1	110
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	15	86	880
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	37	2	136
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	70	2	22
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	52	112	24
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	26	856	24
+
+==========
+
+Thread: 	14
+Branch summary:
+CLASS NAME	METHOD	PC	TAKEN	NOT_TAKEN
+139
+pt/ulisboa/tecnico/cnv/solver/Solver	print	77	2	18
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	173	12	4
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	162	2	16
+pt/ulisboa/tecnico/cnv/solver/Solver	print	88	18	162
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	124	108	36
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	113	18	144
+pt/ulisboa/tecnico/cnv/solver/Solver	print	52	2	42
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	9	162	0
+pt/ulisboa/tecnico/cnv/solver/Solver	deepCloneArray	18	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	69	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	87	9	81
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	183	9	81
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	156	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	113	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	deepCloneArray	23	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	run	35	3808	39984000
+pt/ulisboa/tecnico/cnv/solver/Solver	run	24	136	3808
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	795	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	769	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	684	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	665	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	538	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	500	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	390	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	356	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	261	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	182	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	168	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	156	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	27	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	15	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	values	11	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	28	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	getInstance	3	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	9	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	6	40	840
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	18	744	96
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	6	25	312
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	18	297	15
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	30	24	75
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	45	74	225
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	59	224	1
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	25	1	24
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	15	15	25
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	6	96	40
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	6	1	110
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	15	86	880
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	37	2	136
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	70	2	22
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	52	112	24
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	26	856	24
+
+==========
+
+Thread: 	13
+Branch summary:
+CLASS NAME	METHOD	PC	TAKEN	NOT_TAKEN
+139
+pt/ulisboa/tecnico/cnv/solver/Solver	print	77	4	36
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	173	24	8
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	162	4	32
+pt/ulisboa/tecnico/cnv/solver/Solver	print	88	36	324
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	124	216	72
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	113	36	288
+pt/ulisboa/tecnico/cnv/solver/Solver	print	52	4	84
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	9	324	0
+pt/ulisboa/tecnico/cnv/solver/Solver	deepCloneArray	18	2	18
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	69	2	18
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	87	18	162
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	183	18	162
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	156	2	18
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	113	0	2
+pt/ulisboa/tecnico/cnv/solver/Solver	deepCloneArray	23	0	2
+pt/ulisboa/tecnico/cnv/solver/Solver	run	35	7616	79968000
+pt/ulisboa/tecnico/cnv/solver/Solver	run	24	272	7616
+pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType	toString	795	2	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	769	0	2
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	684	2	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	665	0	2
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	538	2	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	500	0	2
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	390	2	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	356	0	2
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	261	2	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	182	2	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	168	0	2
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	156	0	2
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	27	2	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	15	0	2
+pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType	values	11	0	2
+pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType	toString	28	0	2
+pt/ulisboa/tecnico/cnv/solver/SolverFactory	getInstance	3	1	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory	toString	9	0	2
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	6	80	1680
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	18	1488	192
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	6	50	624
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	18	594	30
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	30	48	150
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	45	148	450
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	59	448	2
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	25	2	48
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	15	30	50
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	6	192	80
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	6	2	220
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	15	172	1760
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	37	4	272
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	70	4	44
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	52	224	48
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	26	1712	48
+
+==========
+
+Thread: 	14
+Branch summary:
+CLASS NAME	METHOD	PC	TAKEN	NOT_TAKEN
+139
+pt/ulisboa/tecnico/cnv/solver/Solver	print	77	2	18
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	173	12	4
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	162	2	16
+pt/ulisboa/tecnico/cnv/solver/Solver	print	88	18	162
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	124	108	36
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	113	18	144
+pt/ulisboa/tecnico/cnv/solver/Solver	print	52	2	42
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	9	162	0
+pt/ulisboa/tecnico/cnv/solver/Solver	deepCloneArray	18	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	69	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	87	9	81
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	183	9	81
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	156	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	113	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	deepCloneArray	23	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	run	35	3808	39984000
+pt/ulisboa/tecnico/cnv/solver/Solver	run	24	136	3808
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	795	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	769	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	684	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	665	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	538	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	500	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	390	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	356	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	261	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	182	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	168	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	156	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	27	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	15	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	values	11	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	28	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	getInstance	3	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	9	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	6	40	840
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	18	744	96
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	6	25	312
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	18	297	15
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	30	24	75
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	45	74	225
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	59	224	1
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	25	1	24
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	15	15	25
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	6	96	40
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	6	1	110
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	15	86	880
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	37	2	136
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	70	2	22
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	52	112	24
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	26	856	24
+
+==========
+
+Thread: 	13
+Branch summary:
+CLASS NAME	METHOD	PC	TAKEN	NOT_TAKEN
+139
+pt/ulisboa/tecnico/cnv/solver/Solver	print	77	2	18
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	173	12	4
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	162	2	16
+pt/ulisboa/tecnico/cnv/solver/Solver	print	88	18	162
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	124	108	36
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	113	18	144
+pt/ulisboa/tecnico/cnv/solver/Solver	print	52	2	42
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	9	162	0
+pt/ulisboa/tecnico/cnv/solver/Solver	deepCloneArray	18	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	69	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	87	9	81
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	183	9	81
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	156	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	113	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	deepCloneArray	23	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	run	35	3808	39984000
+pt/ulisboa/tecnico/cnv/solver/Solver	run	24	136	3808
+pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType	toString	795	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	769	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	684	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	665	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	538	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	500	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	390	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	356	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	261	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	182	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	168	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	156	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	27	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	15	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType	values	11	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType	toString	28	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory	getInstance	3	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory	toString	9	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	6	40	840
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	18	744	96
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	6	25	312
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	18	297	15
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	30	24	75
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	45	74	225
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	59	224	1
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	25	1	24
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	15	15	25
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	6	96	40
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	6	1	110
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	15	86	880
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	37	2	136
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	70	2	22
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	52	112	24
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	26	856	24
+
+==========
+
+Thread: 	13
+Branch summary:
+CLASS NAME	METHOD	PC	TAKEN	NOT_TAKEN
+139
+pt/ulisboa/tecnico/cnv/solver/Solver	print	77	2	18
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	173	12	4
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	162	2	16
+pt/ulisboa/tecnico/cnv/solver/Solver	print	88	18	162
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	124	108	36
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	113	18	144
+pt/ulisboa/tecnico/cnv/solver/Solver	print	52	2	42
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	9	162	0
+pt/ulisboa/tecnico/cnv/solver/Solver	deepCloneArray	18	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	69	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	87	9	81
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	183	9	81
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	156	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	113	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	deepCloneArray	23	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	run	35	3808	39984000
+pt/ulisboa/tecnico/cnv/solver/Solver	run	24	136	3808
+pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType	toString	795	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	769	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	684	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	665	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	538	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	500	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	390	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	356	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	261	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	182	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	168	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	156	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	27	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	15	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType	values	11	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType	toString	28	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory	getInstance	3	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory	toString	9	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	6	40	840
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	18	744	96
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	6	25	312
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	18	297	15
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	30	24	75
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	45	74	225
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	59	224	1
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	25	1	24
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	15	15	25
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	6	96	40
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	6	1	110
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	15	86	880
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	37	2	136
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	70	2	22
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	52	112	24
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	26	856	24
+Load Store summary:
+Field load:    0Field store:   0Regular load:  0Regular store: 0
+==========
+
+Thread: 	13
+Branch summary:
+CLASS NAME	METHOD	PC	TAKEN	NOT_TAKEN
+139
+pt/ulisboa/tecnico/cnv/solver/Solver	print	77	2	18
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	173	12	4
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	162	2	16
+pt/ulisboa/tecnico/cnv/solver/Solver	print	88	18	162
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	124	108	36
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	113	18	144
+pt/ulisboa/tecnico/cnv/solver/Solver	print	52	2	42
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	9	162	0
+pt/ulisboa/tecnico/cnv/solver/Solver	deepCloneArray	18	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	69	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	87	9	81
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	183	9	81
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	156	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	113	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	deepCloneArray	23	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	run	35	3808	39984000
+pt/ulisboa/tecnico/cnv/solver/Solver	run	24	136	3808
+pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType	toString	795	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	769	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	684	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	665	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	538	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	500	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	390	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	356	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	261	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	182	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	168	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	156	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	27	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	15	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType	values	11	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType	toString	28	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory	getInstance	3	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory	toString	9	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	6	40	840
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	18	744	96
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	6	25	312
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	18	297	15
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	30	24	75
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	45	74	225
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	59	224	1
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	25	1	24
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	15	15	25
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	6	96	40
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	6	1	110
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	15	86	880
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	37	2	136
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	70	2	22
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	52	112	24
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	26	856	24
+Load Store summary:
+Field load:    0
+Field store:   0
+Regular load:  0
+Regular store: 0
+
+==========
+
+Thread: 	13
+Branch summary:
+CLASS NAME	METHOD	PC	TAKEN	NOT_TAKEN
+139
+pt/ulisboa/tecnico/cnv/solver/Solver	print	77	2	18
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	173	12	4
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	162	2	16
+pt/ulisboa/tecnico/cnv/solver/Solver	print	88	18	162
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	124	108	36
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	113	18	144
+pt/ulisboa/tecnico/cnv/solver/Solver	print	52	2	42
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	9	162	0
+pt/ulisboa/tecnico/cnv/solver/Solver	deepCloneArray	18	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	69	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	87	9	81
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	183	9	81
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	156	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	113	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	deepCloneArray	23	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	run	35	3808	39984000
+pt/ulisboa/tecnico/cnv/solver/Solver	run	24	136	3808
+pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType	toString	795	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	769	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	684	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	665	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	538	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	500	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	390	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	356	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	261	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	182	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	168	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	156	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	27	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	15	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType	values	11	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType	toString	28	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory	getInstance	3	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory	toString	9	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	6	40	840
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	18	744	96
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	6	25	312
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	18	297	15
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	30	24	75
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	45	74	225
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	59	224	1
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	25	1	24
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	15	15	25
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	6	96	40
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	6	1	110
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	15	86	880
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	37	2	136
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	70	2	22
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	52	112	24
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	26	856	24
+Load Store summary:
+Field load:    2741
+Field store:   20
+Regular load:  40021567
+Regular store: 39989222
+
+==========
+
+Thread: 	13
+Branch summary:
+CLASS NAME	METHOD	PC	TAKEN	NOT_TAKEN
+139
+pt/ulisboa/tecnico/cnv/solver/Solver	print	77	2	18
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	173	12	4
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	162	2	16
+pt/ulisboa/tecnico/cnv/solver/Solver	print	88	18	162
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	124	108	36
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	113	18	144
+pt/ulisboa/tecnico/cnv/solver/Solver	print	52	2	42
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	9	162	0
+pt/ulisboa/tecnico/cnv/solver/Solver	deepCloneArray	18	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	69	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	87	9	81
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	183	9	81
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	156	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	113	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	deepCloneArray	23	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	run	35	3808	39984000
+pt/ulisboa/tecnico/cnv/solver/Solver	run	24	136	3808
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	795	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	769	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	684	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	665	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	538	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	500	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	390	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	356	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	261	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	182	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	168	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	156	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	27	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	15	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	values	11	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	28	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	getInstance	3	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	9	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	6	40	840
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	18	744	96
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	6	25	312
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	18	297	15
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	30	24	75
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	45	74	225
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	59	224	1
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	25	1	24
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	15	15	25
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	6	96	40
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	6	1	110
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	15	86	880
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	37	2	136
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	70	2	22
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	52	112	24
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	26	856	24
+Load Store summary:
+Field load:    2741
+Field store:   7
+Regular load:  40021501
+Regular store: 39989209
+
+==========
+
+Thread: 	13
+Branch summary:
+CLASS NAME	METHOD	PC	TAKEN	NOT_TAKEN
+139
+pt/ulisboa/tecnico/cnv/solver/Solver	print	77	2	18
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	173	12	4
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	162	2	16
+pt/ulisboa/tecnico/cnv/solver/Solver	print	88	18	162
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	124	108	36
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	113	18	144
+pt/ulisboa/tecnico/cnv/solver/Solver	print	52	2	42
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	9	162	0
+pt/ulisboa/tecnico/cnv/solver/Solver	deepCloneArray	18	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	69	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	87	9	81
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	183	9	81
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	156	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	113	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	deepCloneArray	23	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	run	35	3808	39984000
+pt/ulisboa/tecnico/cnv/solver/Solver	run	24	136	3808
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	795	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	769	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	684	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	665	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	538	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	500	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	390	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	356	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	261	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	182	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	168	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	156	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	27	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	15	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	values	11	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	28	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	getInstance	3	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	9	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	6	40	840
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	18	744	96
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	6	25	312
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	18	297	15
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	30	24	75
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	45	74	225
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	59	224	1
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	25	1	24
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	15	15	25
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	6	96	40
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	6	1	110
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	15	86	880
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	37	2	136
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	70	2	22
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	52	112	24
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	26	856	24
+Load Store summary:
+Field load:    2741
+Field store:   7
+Regular load:  40021501
+Regular store: 39989209
+
+==========
+
+Thread: 	13
+Branch summary:
+CLASS NAME	METHOD	PC	TAKEN	NOT_TAKEN
+139
+pt/ulisboa/tecnico/cnv/solver/Solver	print	77	2	18
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	173	12	4
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	162	2	16
+pt/ulisboa/tecnico/cnv/solver/Solver	print	88	18	162
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	124	108	36
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	113	18	144
+pt/ulisboa/tecnico/cnv/solver/Solver	print	52	2	42
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	9	162	0
+pt/ulisboa/tecnico/cnv/solver/Solver	deepCloneArray	18	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	69	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	87	9	81
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	183	9	81
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	156	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	113	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	deepCloneArray	23	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	run	35	3808	39984000
+pt/ulisboa/tecnico/cnv/solver/Solver	run	24	136	3808
+pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType	toString	795	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	769	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	684	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	665	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	538	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	500	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	390	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	356	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	261	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	182	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	168	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	156	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	27	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	15	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType	values	11	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType	toString	28	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory	getInstance	3	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory	toString	9	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	6	40	840
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	18	744	96
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	6	25	312
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	18	297	15
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	30	24	75
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	45	74	225
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	59	224	1
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	25	1	24
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	15	15	25
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	6	96	40
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	6	1	110
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	15	86	880
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	37	2	136
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	70	2	22
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	52	112	24
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	26	856	24
+Load Store summary:
+Field load:    2741
+Field store:   20
+Regular load:  40021567
+Regular store: 39989222
+
+==========
+
+Thread: 	14
+Branch summary:
+CLASS NAME	METHOD	PC	TAKEN	NOT_TAKEN
+139
+pt/ulisboa/tecnico/cnv/solver/Solver	print	77	2	18
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	173	12	4
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	162	2	16
+pt/ulisboa/tecnico/cnv/solver/Solver	print	88	18	162
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	124	108	36
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	113	18	144
+pt/ulisboa/tecnico/cnv/solver/Solver	print	52	2	42
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	9	162	0
+pt/ulisboa/tecnico/cnv/solver/Solver	deepCloneArray	18	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	69	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	87	9	81
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	183	9	81
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	156	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	113	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	deepCloneArray	23	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	run	35	3808	39984000
+pt/ulisboa/tecnico/cnv/solver/Solver	run	24	136	3808
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	795	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	769	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	684	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	665	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	538	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	500	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	390	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	356	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	261	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	182	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	168	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	156	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	27	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	15	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	values	11	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	28	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	getInstance	3	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	9	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	6	40	840
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	18	744	96
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	6	25	312
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	18	297	15
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	30	24	75
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	45	74	225
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	59	224	1
+pt/ulisboa/tecnico/cnv/solver/Solver	boxCheck	25	1	24
+pt/ulisboa/tecnico/cnv/solver/Solver	colCheck	15	15	25
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	6	96	40
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	6	1	110
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	15	86	880
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	37	2	136
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	70	2	22
+pt/ulisboa/tecnico/cnv/solver/Solver	rowCheck	52	112	24
+pt/ulisboa/tecnico/cnv/solver/Solver	runSolver	26	856	24
+Load Store summary:
+Field load:    2741
+Field store:   7
+Regular load:  40021501
+Regular store: 39989209
+
+==========
+
+Thread: 	13
+Branch summary:
+CLASS NAME	METHOD	PC	TAKEN	NOT_TAKEN
+139
+pt/ulisboa/tecnico/cnv/solver/Solver	print	77	2	18
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	173	12	4
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	162	2	16
+pt/ulisboa/tecnico/cnv/solver/Solver	print	88	18	162
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	124	108	36
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	113	18	144
+pt/ulisboa/tecnico/cnv/solver/Solver	print	52	2	42
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	9	162	0
+pt/ulisboa/tecnico/cnv/solver/Solver	deepCloneArray	18	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	69	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	87	9	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	toString	183	9	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	toString	156	1	9
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	uncover	113	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	deepCloneArray	23	0	1
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	run	35	7420	77910000
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	run	24	265	7420
+pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType	toString	795	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	769	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	684	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	665	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	538	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	500	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	390	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	356	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	261	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	182	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	168	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	156	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	27	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	15	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType	values	11	0	2
+pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType	toString	28	1	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory	getInstance	3	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory	toString	32	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory	toString	9	1	0
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	run	173	1	9
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	run	184	9	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	run	195	81	729
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	209	642	87
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	run	113	1	59
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	createMatrix	25	1	9
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	createMatrix	36	9	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	createMatrix	46	22	59
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	16	729	43011
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	187	29	0
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	181	101	29
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	175	228	130
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	169	306	358
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	163	1344	664
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	157	1827	2008
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	151	37760	3835
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	139	59	472
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	133	472	531
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	127	3776	472
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	121	531	4248
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	115	37760	4779
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	103	3776	472
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	97	33984	4248
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	91	4779	38232
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	5	0	729
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	458	1	324
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	469	324	348
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	246	1	729
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	417	642	87
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	275	729	236196
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	365	87	261
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	324	261	87
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	296	348	25
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	285	235848	348
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	24	1	324
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$ColumnID	<init>	113	81	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$ColumnID	<init>	87	162	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$ColumnID	<init>	47	81	243
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	cover	38	81	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	mapSolvedToGrid	140	81	243
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	cover	82	81	243
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	cover	49	81	0
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	search	11	81	1
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	mapSolvedToGrid	134	1	9
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	mapSolvedToGrid	145	9	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	mapSolvedToGrid	58	243	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	mapSolvedToGrid	115	243	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	mapSolvedToGrid	88	162	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	mapSolvedToGrid	24	1	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	choose	21	81	13203
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	choose	40	13200	3
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	cover	29	324	87
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	cover	39	87	261
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	uncover	7	324	87
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	uncover	17	87	261
+Load Store summary:
+Field load:    319990
+Field store:   10517
+Regular load:  81579225
+Regular store: 78483006
+
+==========
+
+Thread: 	14
+Branch summary:
+CLASS NAME	METHOD	PC	TAKEN	NOT_TAKEN
+139
+pt/ulisboa/tecnico/cnv/solver/Solver	print	77	2	18
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	173	12	4
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	162	2	16
+pt/ulisboa/tecnico/cnv/solver/Solver	print	88	18	162
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	124	108	36
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	113	18	144
+pt/ulisboa/tecnico/cnv/solver/Solver	print	52	2	42
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	9	162	0
+pt/ulisboa/tecnico/cnv/solver/Solver	deepCloneArray	18	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	69	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	87	9	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	toString	183	9	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	toString	156	1	9
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	uncover	113	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	deepCloneArray	23	0	1
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	run	35	7420	77910000
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	run	24	265	7420
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	795	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	769	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	684	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	665	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	538	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	500	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	390	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	356	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	261	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	182	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	168	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	156	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	27	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	15	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	values	11	0	2
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	28	1	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	getInstance	3	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	32	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser	toString	9	1	0
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	run	173	1	9
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	run	184	9	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	run	195	81	729
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	209	642	87
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	run	113	1	59
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	createMatrix	25	1	9
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	createMatrix	36	9	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	createMatrix	46	22	59
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	16	729	43011
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	187	29	0
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	181	101	29
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	175	228	130
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	169	306	358
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	163	1344	664
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	157	1827	2008
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	151	37760	3835
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	139	59	472
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	133	472	531
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	127	3776	472
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	121	531	4248
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	115	37760	4779
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	103	3776	472
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	97	33984	4248
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	91	4779	38232
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	5	0	729
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	458	1	324
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	469	324	348
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	246	1	729
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	417	642	87
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	275	729	236196
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	365	87	261
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	324	261	87
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	296	348	25
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	285	235848	348
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	24	1	324
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$ColumnID	<init>	113	81	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$ColumnID	<init>	87	162	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$ColumnID	<init>	47	81	243
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	cover	38	81	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	mapSolvedToGrid	140	81	243
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	cover	82	81	243
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	cover	49	81	0
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	search	11	81	1
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	mapSolvedToGrid	134	1	9
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	mapSolvedToGrid	145	9	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	mapSolvedToGrid	58	243	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	mapSolvedToGrid	115	243	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	mapSolvedToGrid	88	162	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	mapSolvedToGrid	24	1	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	choose	21	81	13203
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	choose	40	13200	3
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	cover	29	324	87
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	cover	39	87	261
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	uncover	7	324	87
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	uncover	17	87	261
+Load Store summary:
+Field load:    319990
+Field store:   10504
+Regular load:  81579159
+Regular store: 78482993
+
+==========
+
+Thread: 	13
+Branch summary:
+CLASS NAME	METHOD	PC	TAKEN	NOT_TAKEN
+139
+pt/ulisboa/tecnico/cnv/solver/Solver	print	77	2	18
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	173	12	4
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	162	2	16
+pt/ulisboa/tecnico/cnv/solver/Solver	print	88	18	162
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	124	108	36
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	113	18	144
+pt/ulisboa/tecnico/cnv/solver/Solver	print	52	2	42
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	9	162	0
+pt/ulisboa/tecnico/cnv/solver/Solver	deepCloneArray	18	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	69	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	87	9	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	toString	183	9	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	toString	156	1	9
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	uncover	113	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	deepCloneArray	23	0	1
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	run	35	7420	77910000
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	run	24	265	7420
+pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType	toString	795	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	769	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	684	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	665	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	538	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	500	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	390	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	356	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	261	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	182	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	168	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	156	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	27	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	15	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType	values	11	0	2
+pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType	toString	28	1	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory	getInstance	3	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory	toString	32	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory	toString	9	1	0
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	run	173	1	9
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	run	184	9	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	run	195	81	729
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	209	642	87
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	run	113	1	59
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	createMatrix	25	1	9
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	createMatrix	36	9	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	createMatrix	46	22	59
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	16	729	43011
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	187	29	0
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	181	101	29
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	175	228	130
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	169	306	358
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	163	1344	664
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	157	1827	2008
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	151	37760	3835
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	139	59	472
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	133	472	531
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	127	3776	472
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	121	531	4248
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	115	37760	4779
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	103	3776	472
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	97	33984	4248
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	91	4779	38232
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	5	0	729
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	458	1	324
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	469	324	348
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	246	1	729
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	417	642	87
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	275	729	236196
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	365	87	261
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	324	261	87
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	296	348	25
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	285	235848	348
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	24	1	324
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$ColumnID	<init>	113	81	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$ColumnID	<init>	87	162	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$ColumnID	<init>	47	81	243
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	cover	38	81	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	mapSolvedToGrid	140	81	243
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	cover	82	81	243
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	cover	49	81	0
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	search	11	81	1
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	mapSolvedToGrid	134	1	9
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	mapSolvedToGrid	145	9	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	mapSolvedToGrid	58	243	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	mapSolvedToGrid	115	243	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	mapSolvedToGrid	88	162	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	mapSolvedToGrid	24	1	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	choose	21	81	13203
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	choose	40	13200	3
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	cover	29	324	87
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	cover	39	87	261
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	uncover	7	324	87
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	uncover	17	87	261
+Load Store summary:
+Field load:    319990
+Field store:   10517
+Regular load:  81579225
+Regular store: 78483006
+
+==========
+
+Thread: 	13
+Branch summary:
+CLASS NAME	METHOD	PC	TAKEN	NOT_TAKEN
+139
+pt/ulisboa/tecnico/cnv/solver/Solver	print	77	2	18
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	173	12	4
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	162	2	16
+pt/ulisboa/tecnico/cnv/solver/Solver	print	88	18	162
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	124	108	36
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	113	18	144
+pt/ulisboa/tecnico/cnv/solver/Solver	print	52	2	42
+pt/ulisboa/tecnico/cnv/solver/Solver	printFixedWidth	9	162	0
+pt/ulisboa/tecnico/cnv/solver/Solver	deepCloneArray	18	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	69	1	9
+pt/ulisboa/tecnico/cnv/solver/Solver	toString	87	9	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	toString	183	9	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	toString	156	1	9
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	uncover	113	0	1
+pt/ulisboa/tecnico/cnv/solver/Solver	deepCloneArray	23	0	1
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	run	35	7420	77910000
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	run	24	265	7420
+pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType	toString	795	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	769	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	684	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	665	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	538	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	500	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	390	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	356	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	261	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	182	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	168	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	156	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	27	1	0
+pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters	toString	15	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType	values	11	0	2
+pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType	toString	28	1	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory	getInstance	3	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory	toString	32	0	1
+pt/ulisboa/tecnico/cnv/solver/SolverFactory	toString	9	1	0
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	run	173	1	9
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	run	184	9	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	run	195	81	729
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	209	642	87
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	run	113	1	59
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	createMatrix	25	1	9
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	createMatrix	36	9	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	createMatrix	46	22	59
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	16	729	43011
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	187	29	0
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	181	101	29
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	175	228	130
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	169	306	358
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	163	1344	664
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	157	1827	2008
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	151	37760	3835
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	139	59	472
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	133	472	531
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	127	3776	472
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	121	531	4248
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	115	37760	4779
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	103	3776	472
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	97	33984	4248
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	91	4779	38232
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver	filled	5	0	729
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	458	1	324
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	469	324	348
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	246	1	729
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	417	642	87
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	275	729	236196
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	365	87	261
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	324	261	87
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	296	348	25
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	285	235848	348
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	<init>	24	1	324
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$ColumnID	<init>	113	81	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$ColumnID	<init>	87	162	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$ColumnID	<init>	47	81	243
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	cover	38	81	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	mapSolvedToGrid	140	81	243
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	cover	82	81	243
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	cover	49	81	0
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	search	11	81	1
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	mapSolvedToGrid	134	1	9
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	mapSolvedToGrid	145	9	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	mapSolvedToGrid	58	243	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	mapSolvedToGrid	115	243	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	mapSolvedToGrid	88	162	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	mapSolvedToGrid	24	1	81
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	choose	21	81	13203
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	choose	40	13200	3
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	cover	29	324	87
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	cover	39	87	261
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	uncover	7	324	87
+pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node	uncover	17	87	261
+Load Store summary:
+Field load:    319990
+Field store:   10517
+Regular load:  81579225
+Regular store: 78483006
+
+==========

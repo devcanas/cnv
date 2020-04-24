@@ -394,7 +394,8 @@ public class StatisticsTool
 		{
 			System.out.println("Branch summary:");
 			System.out.println("CLASS NAME" + '\t' + "METHOD" + '\t' + "PC" + '\t' + "TAKEN" + '\t' + "NOT_TAKEN");
-			
+			System.out.println(branch_info.length);
+
 			for (int i = 0; i < branch_info.length; i++) {
 				if (branch_info[i] != null) {
 					branch_info[i].print();

@@ -21,8 +21,6 @@ import java.util.concurrent.Executors;
 
 public class WebServer {
 
-	static Test instrumentation = new Test();
-
 	public static void main(final String[] args) throws Exception {
 
 		//final HttpServer server = HttpServer.create(new InetSocketAddress("127.0.0.1", 8000), 0);
@@ -60,6 +58,8 @@ public class WebServer {
 		@Override
 		public void handle(final HttpExchange t) throws IOException {
 
+			CPUUsage threadMetrics = new CPUUsage();
+
 			System.out.println(t.getRequestHeaders());
 
 			// Get the query.
@@ -96,7 +96,9 @@ public class WebServer {
 
 			//Solve sudoku puzzle
 			JSONArray solution = s.solveSudoku();
-			logRequestMetrics();
+
+			logRequestMetrics(threadMetrics);
+			threadMetrics.reset();
 
 			// Send response to browser.
 			final Headers hdrs = t.getResponseHeaders();
@@ -128,19 +130,15 @@ public class WebServer {
 		}
 	}
 
-	public static void logRequestMetrics(){
+	public static void logRequestMetrics(CPUUsage threadMetrics){
 		// gets the working dir to save the logs to
 		String dir = System.getProperty("user.dir");
 
-		// sets up the metrics to be logged
-		Thread thread = Thread.currentThread();
-		int icount = instrumentation.getICount();
-
 		// logs metrics
 		try {
-			Writer fileWriter = new FileWriter(dir + "/log.txt", false);
-			fileWriter.write("Thread Id: \t" + thread.getId() + "\n");
-			fileWriter.write("ICount: \t" + icount + "\n");
+			Writer fileWriter = new FileWriter(dir + "/log.txt", true);
+			fileWriter.write(threadMetrics.toString());
+			fileWriter.write("\n==========\n");
 			fileWriter.close();
 		} catch (IOException e) {
 			System.out.print(e.getStackTrace());

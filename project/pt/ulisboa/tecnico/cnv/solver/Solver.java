@@ -79,8 +79,6 @@ public class Solver {
             jsonArray.put(line);
         }
 
-        System.out.println(jsonArray);
-
         return jsonArray;
     }
 
