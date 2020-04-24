@@ -2,83 +2,58 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14ab684e-290c-4417-951c-39640b6fbbb8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BIT/BIT/Metric.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BIT/BIT/Metrics.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BIT/BIT/StatisticsBranch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-bit.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BIT/BIT/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/BIT/BIT/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BIT/BIT/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/BIT/BIT/CPUUsage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BIT/samples/ICount.class" beforeDir="false" afterPath="$PROJECT_DIR$/BIT/samples/ICount.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BIT/samples/StatisticsTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/BIT/samples/StatisticsTool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/AbstractSudokuSolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/AbstractSudokuSolver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SampleParserMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SampleParserMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/Solver.class" beforeDir="false" afterPath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/Solver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters.class" beforeDir="false" afterPath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser$SolverParameters.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SolverArgumentParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType.class" beforeDir="false" afterPath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SolverFactory$SolverType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SolverFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SolverFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SolverMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SolverMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SudokuSolverBFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SudokuSolverBFS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SudokuSolverCP.class" beforeDir="false" afterPath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SudokuSolverCP.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$ColumnID.class" beforeDir="false" afterPath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$ColumnID.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$ColumnNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$ColumnNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver$Node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX$AlgorithmXSolver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX.class" beforeDir="false" afterPath="$PROJECT_DIR$/instrumented/pt/ulisboa/tecnico/cnv/solver/SudokuSolverDLX.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BIT/BIT/Metrics.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BIT/BIT/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BIT/config-bit.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BIT/examples/Compress$Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BIT/examples/Compress.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BIT/examples/Compress.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BIT/examples/Factorial.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BIT/examples/Factorial.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BIT/examples/Factorial4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BIT/examples/Factorial4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BIT/examples/Fibonacci.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BIT/examples/Fibonacci.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BIT/examples/FileCopy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BIT/examples/FileCopy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BIT/examples/Hello.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BIT/examples/Hello.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BIT/examples/TestOpsVarsFields.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BIT/examples/TestOpsVarsFields.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BIT/examples/ThreadLister$Applet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BIT/examples/ThreadLister.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BIT/examples/ThreadLister.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BIT/java-config-rnl-vm.sh" beforeDir="false" afterPath="$PROJECT_DIR$/java-config-rnl-vm.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BIT/samples/AnalyzeMethods.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BIT/samples/BranchPrediction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BIT/samples/GetStatsOfClassesExecuted.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BIT/samples/ICount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BIT/samples/ICount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BIT/samples/StatisticsBranch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BIT/samples/StatisticsTool.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/pt/ulisboa/tecnico/cnv/server/WebServer$MyHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/project/pt/ulisboa/tecnico/cnv/server/WebServer$MyHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/pt/ulisboa/tecnico/cnv/server/WebServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/project/pt/ulisboa/tecnico/cnv/server/WebServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/pt/ulisboa/tecnico/cnv/server/WebServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/pt/ulisboa/tecnico/cnv/server/WebServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/pt/ulisboa/tecnico/cnv/solver/Solver.class" beforeDir="false" afterPath="$PROJECT_DIR$/project/pt/ulisboa/tecnico/cnv/solver/Solver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/pt/ulisboa/tecnico/cnv/solver/Solver.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/pt/ulisboa/tecnico/cnv/solver/Solver.java" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BIT/samples/StatisticsTool.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1685">
-              <caret line="343" column="73" selection-start-line="343" selection-start-column="73" selection-end-line="343" selection-end-column="90" />
-              <folding>
-                <element signature="e#0#16888#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BIT/samples/ICount.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="49" column="39" lean-forward="true" selection-start-line="49" selection-end-line="50" />
-              <folding>
-                <element signature="e#0#2634#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BIT/BIT/CPUUsage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10">
-              <caret line="85" column="5" lean-forward="true" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
-              <folding>
-                <element signature="e#5087#5088#0" expanded="true" />
-                <element signature="e#5154#5155#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1377">
+              <caret line="85" column="5" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
@@ -88,9 +63,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/log.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="447">
+              <caret line="1236" column="21" selection-start-line="1236" selection-start-column="21" selection-end-line="1236" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BIT/BIT/highBIT/InstructionTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1122">
+            <state>
               <folding>
                 <element signature="e#0#28387#0" expanded="true" />
               </folding>
@@ -101,13 +85,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BIT/BIT/StatisticsBranch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="26" column="19" lean-forward="true" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#1230#0" expanded="true" />
-                <element signature="e#1204#1205#0" expanded="true" />
-                <element signature="e#1225#1226#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="99">
+              <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -115,16 +94,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BIT/BIT/Metric.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
-              <folding>
-                <element signature="e#700#701#0" expanded="true" />
-                <element signature="e#734#735#0" expanded="true" />
-                <element signature="e#783#784#0" expanded="true" />
-                <element signature="e#815#816#0" expanded="true" />
-                <element signature="e#840#841#0" expanded="true" />
-                <element signature="e#874#875#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="439">
+              <caret line="83" selection-start-line="83" selection-end-line="83" />
             </state>
           </provider>
         </entry>
@@ -132,11 +103,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project/pt/ulisboa/tecnico/cnv/server/WebServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="100" column="34" lean-forward="true" selection-start-line="100" selection-start-column="34" selection-end-line="100" selection-end-column="34" />
+            <state relative-caret-position="204">
+              <caret line="60" column="52" lean-forward="true" selection-start-line="60" selection-start-column="52" selection-end-line="60" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="272">
+                <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/java-config-rnl-vm.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -169,12 +161,21 @@
         <option value="$PROJECT_DIR$/BIT/samples/StatisticsTool.java" />
         <option value="$PROJECT_DIR$/BIT/BIT/StatisticsBranch.java" />
         <option value="$PROJECT_DIR$/log.txt" />
-        <option value="$PROJECT_DIR$/project/pt/ulisboa/tecnico/cnv/server/WebServer.java" />
         <option value="$PROJECT_DIR$/BIT/BIT/Metric.java" />
         <option value="$PROJECT_DIR$/BIT/BIT/CPUUsage.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/project/pt/ulisboa/tecnico/cnv/server/WebServer.java" />
+        <option value="$PROJECT_DIR$/BIT/config-bit.sh" />
+        <option value="$PROJECT_DIR$/README.txt" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="305" />
+    <option name="y" value="250" />
+    <option name="width" value="1280" />
+    <option name="height" value="725" />
   </component>
   <component name="ProjectId" id="1azE2w8moL21Dbu6MwIxXi7Tqdx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -184,6 +185,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -191,73 +193,10 @@
               <item name="cnv" type="b2602c69:ProjectViewProjectNode" />
               <item name="cnv" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="cnv" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cnv" type="462c0819:PsiDirectoryNode" />
-              <item name="BIT" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cnv" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cnv" type="462c0819:PsiDirectoryNode" />
-              <item name="BIT" type="462c0819:PsiDirectoryNode" />
-              <item name="BIT" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cnv" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cnv" type="462c0819:PsiDirectoryNode" />
-              <item name="BIT" type="462c0819:PsiDirectoryNode" />
-              <item name="samples" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cnv" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cnv" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cnv" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cnv" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="pt" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cnv" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cnv" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="pt" type="462c0819:PsiDirectoryNode" />
-              <item name="ulisboa" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cnv" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cnv" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="pt" type="462c0819:PsiDirectoryNode" />
-              <item name="ulisboa" type="462c0819:PsiDirectoryNode" />
-              <item name="tecnico" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cnv" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cnv" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="pt" type="462c0819:PsiDirectoryNode" />
-              <item name="ulisboa" type="462c0819:PsiDirectoryNode" />
-              <item name="tecnico" type="462c0819:PsiDirectoryNode" />
-              <item name="cnv" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cnv" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cnv" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="pt" type="462c0819:PsiDirectoryNode" />
-              <item name="ulisboa" type="462c0819:PsiDirectoryNode" />
-              <item name="tecnico" type="462c0819:PsiDirectoryNode" />
-              <item name="cnv" type="462c0819:PsiDirectoryNode" />
-              <item name="solver" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -268,13 +207,18 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587751791522" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587767436283" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\cnv" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\cnv\BIT\BIT" />
     </key>
@@ -301,28 +245,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587729820081</updated>
+      <workItem from="1587761841353" duration="4651000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15305000" />
+    <option name="totallyTimeSpent" value="22785000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24966443" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25302014" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.16288953" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -330,16 +270,24 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.10339943" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2093" y="372" key="com.intellij.ide.util.TipDialog" timestamp="1587729824154">
@@ -415,87 +363,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BIT/BIT/StatisticsBranch.java">
+    <entry file="file://$PROJECT_DIR$/BIT/samples/StatisticsTool.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="26" column="19" lean-forward="true" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#1230#0" expanded="true" />
-            <element signature="e#1204#1205#0" expanded="true" />
-            <element signature="e#1225#1226#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="5457">
+          <caret line="343" column="73" selection-start-line="343" selection-start-column="73" selection-end-line="343" selection-end-column="90" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BIT/samples/ICount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="49" column="39" lean-forward="true" selection-start-line="49" selection-end-line="50" />
+        <state relative-caret-position="595">
+          <caret line="49" column="39" selection-start-line="49" selection-end-line="50" />
           <folding>
             <element signature="e#0#2634#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BIT/samples/StatisticsTool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1685">
-          <caret line="343" column="73" selection-start-line="343" selection-start-column="73" selection-end-line="343" selection-end-column="90" />
-          <folding>
-            <element signature="e#0#16888#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BIT/BIT/Metric.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
-          <folding>
-            <element signature="e#700#701#0" expanded="true" />
-            <element signature="e#734#735#0" expanded="true" />
-            <element signature="e#783#784#0" expanded="true" />
-            <element signature="e#815#816#0" expanded="true" />
-            <element signature="e#840#841#0" expanded="true" />
-            <element signature="e#874#875#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BIT/BIT/highBIT/InstructionTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1122">
-          <folding>
-            <element signature="e#0#28387#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
-          <caret line="1136" column="23" lean-forward="true" selection-start-line="1136" selection-start-column="23" selection-end-line="1136" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/pt/ulisboa/tecnico/cnv/server/WebServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="100" column="34" lean-forward="true" selection-start-line="100" selection-start-column="34" selection-end-line="100" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BIT/BIT/CPUUsage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10">
-          <caret line="85" column="5" lean-forward="true" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
-          <folding>
-            <element signature="e#5087#5088#0" expanded="true" />
-            <element signature="e#5154#5155#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1377">
+          <caret line="85" column="5" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -503,6 +391,75 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BIT/BIT/highBIT/InstructionTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#28387#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config-bit.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="136" selection-start-column="136" selection-end-column="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BIT/BIT/StatisticsBranch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BIT/BIT/Metric.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/pt/ulisboa/tecnico/cnv/server/WebServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="60" column="52" lean-forward="true" selection-start-line="60" selection-start-column="52" selection-end-line="60" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="1236" column="21" selection-start-line="1236" selection-start-column="21" selection-end-line="1236" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-config-rnl-vm.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="272">
+            <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="5" lean-forward="true" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
         </state>
       </provider>
     </entry>
