@@ -10,6 +10,7 @@ import pt.ulisboa.tecnico.cnv.solver.SolverArgumentParser;
 import pt.ulisboa.tecnico.cnv.solver.SolverFactory;
 
 import BIT.*;
+import pt.ulisboa.tecnico.cnv.server.PingHandler;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.*;
@@ -23,9 +24,12 @@ public class WebServer {
 
 	public static void main(final String[] args) throws Exception {
 
-		//final HttpServer server = HttpServer.create(new InetSocketAddress("127.0.0.1", 8000), 0);
+		// final HttpServer server = HttpServer.create(new
+		// InetSocketAddress("127.0.0.1", 8000), 0);
 
 		final HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
+
+		server.createContext("/ping", new PingHandler());
 
 		server.createContext("/sudoku", new MyHandler());
 
@@ -37,23 +41,24 @@ public class WebServer {
 	}
 
 	public static String parseRequestBody(InputStream is) throws IOException {
-        InputStreamReader isr =  new InputStreamReader(is,"utf-8");
-        BufferedReader br = new BufferedReader(isr);
+		InputStreamReader isr = new InputStreamReader(is, "utf-8");
+		BufferedReader br = new BufferedReader(isr);
 
-        // From now on, the right way of moving from bytes to utf-8 characters:
+		// From now on, the right way of moving from bytes to utf-8 characters:
 
-        int b;
-        StringBuilder buf = new StringBuilder(512);
-        while ((b = br.read()) != -1) {
-            buf.append((char) b);
+		int b;
+		StringBuilder buf = new StringBuilder(512);
+		while ((b = br.read()) != -1) {
+			buf.append((char) b);
 
-        }
+		}
 
-        br.close();
-        isr.close();
+		br.close();
+		isr.close();
 
-        return buf.toString();
-    }
+		return buf.toString();
+	}
+
 	static class MyHandler implements HttpHandler {
 		@Override
 		public void handle(final HttpExchange t) throws IOException {
@@ -84,7 +89,7 @@ public class WebServer {
 			// Store from ArrayList into regular String[].
 			final String[] args = new String[newArgs.size()];
 			int i = 0;
-			for(String arg: newArgs) {
+			for (String arg : newArgs) {
 				args[i] = arg;
 				i++;
 			}
@@ -94,7 +99,7 @@ public class WebServer {
 			// Create solver instance from factory.
 			final Solver s = SolverFactory.getInstance().makeSolver(ap);
 
-			//Solve sudoku puzzle
+			// Solve sudoku puzzle
 			JSONArray solution = s.solveSudoku();
 
 			logRequestMetrics(threadMetrics);
@@ -103,26 +108,25 @@ public class WebServer {
 			// Send response to browser.
 			final Headers hdrs = t.getResponseHeaders();
 
-            //t.sendResponseHeaders(200, responseFile.length());
+			// t.sendResponseHeaders(200, responseFile.length());
 
-
-			///hdrs.add("Content-Type", "image/png");
-            hdrs.add("Content-Type", "application/json");
+			/// hdrs.add("Content-Type", "image/png");
+			hdrs.add("Content-Type", "application/json");
 
 			hdrs.add("Access-Control-Allow-Origin", "*");
 
-            hdrs.add("Access-Control-Allow-Credentials", "true");
+			hdrs.add("Access-Control-Allow-Credentials", "true");
 			hdrs.add("Access-Control-Allow-Methods", "POST, GET, HEAD, OPTIONS");
-			hdrs.add("Access-Control-Allow-Headers", "Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
+			hdrs.add("Access-Control-Allow-Headers",
+					"Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
 
-            t.sendResponseHeaders(200, solution.toString().length());
+			t.sendResponseHeaders(200, solution.toString().length());
 
-
-            final OutputStream os = t.getResponseBody();
-            OutputStreamWriter osw = new OutputStreamWriter(os, "UTF-8");
-            osw.write(solution.toString());
-            osw.flush();
-            osw.close();
+			final OutputStream os = t.getResponseBody();
+			OutputStreamWriter osw = new OutputStreamWriter(os, "UTF-8");
+			osw.write(solution.toString());
+			osw.flush();
+			osw.close();
 
 			os.close();
 
@@ -130,7 +134,7 @@ public class WebServer {
 		}
 	}
 
-	public static void logRequestMetrics(CPUUsage threadMetrics){
+	public static void logRequestMetrics(CPUUsage threadMetrics) {
 		// gets the working dir to save the logs to
 		String dir = System.getProperty("user.dir");
 
