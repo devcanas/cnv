@@ -42,19 +42,20 @@ public class LoadBalancerAutoScaler {
         server.start();
 
         while(true){
-            URL url = new URL("http://ec2-3-86-192-48.compute-1.amazonaws.com:8000/ping");
-            con = (HttpURLConnection) url.openConnection();
-            con.setRequestMethod("GET");
-            int status = con.getResponseCode();
-            if(status != 200){
-                //Check if instance is runnning
-                //Stop instance if its not running
-                //Remove instance from this.instances
-                //See if there needs to be another instance running
-                //Launches new instance if needed
-            }else{
-                Thread.sleep(60000);
+            for (Instance instance : instances) {
+                URL url = new URL("http://" + instance.getPublicDnsName() +":8000/ping");
+                con = (HttpURLConnection) url.openConnection();
+                con.setRequestMethod("GET");
+                int status = con.getResponseCode();
+                if(status != 200){
+                    //Check if instance is runnning
+                    //Stop instance if its not running
+                    //Remove instance from this.instances
+                    //See if there needs to be another instance running
+                    //Launches new instance if needed
+                }
             }
+            Thread.sleep(60000);
         }
     }
 
