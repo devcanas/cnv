@@ -29,8 +29,8 @@ public class WebServer {
 
 		final HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
 
+		// routes
 		server.createContext("/ping", new PingHandler());
-
 		server.createContext("/sudoku", new MyHandler());
 
 		// be aware! infinite pool of threads!
