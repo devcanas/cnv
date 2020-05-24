@@ -31,13 +31,34 @@ public class LoadBalancerAutoScaler {
 
     static AmazonEC2      ec2;
     static AmazonCloudWatch cloudWatch;
+    static Set<Instance> instances = new HashSet<Instance>();
+
+    public static void main(String[] args) throws Exception {
+        init();
+
+        HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
+        server.createContext("/sudoku", new MyHandler());
+        server.setExecutor(null); // creates a default executor
+        server.start();
+
+        while(true){
+            URL url = new URL("http://ec2-3-86-192-48.compute-1.amazonaws.com:8000/ping");
+            con = (HttpURLConnection) url.openConnection();
+            con.setRequestMethod("GET");
+            int status = con.getResponseCode();
+            if(status != 200){
+                //Check if instance is runnning
+                //Stop instance if its not running
+                //Remove instance from this.instances
+                //See if there needs to be another instance running
+                //Launches new instance if needed
+            }else{
+                Thread.sleep(60000);
+            }
+        }
+    }
 
     private static void init() throws Exception {
-        /*
-         * The ProfileCredentialsProvider will return your [default]
-         * credential profile by reading from the credentials file located at
-         * (~/.aws/credentials).
-         */
 
         AWSCredentials credentials = null;
         try {
@@ -49,16 +70,15 @@ public class LoadBalancerAutoScaler {
                             "location (~/.aws/credentials), and is in valid format.",
                     e);
         }
+
         ec2 = AmazonEC2ClientBuilder.standard().withRegion("us-east-1").withCredentials(new AWSStaticCredentialsProvider(credentials)).build();
-    }
+        DescribeInstancesResult describeInstancesResult = ec2.describeInstances();
+        List<Reservation> reservations = describeInstancesResult.getReservations();
 
-    public static void main(String[] args) throws Exception {
-        init();
+        for (Reservation reservation : reservations) {
+            instances.addAll(reservation.getInstances());
+        }
 
-        HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
-        server.createContext("/sudoku", new MyHandler());
-        server.setExecutor(null); // creates a default executor
-        server.start();
     }
 
     public static String parseRequestBody(InputStream is) throws IOException {
@@ -80,33 +100,6 @@ public class LoadBalancerAutoScaler {
         return buf.toString();
     }
 
-    static class MyHandler implements HttpHandler {
-        @Override
-        public void handle(HttpExchange t) throws IOException {
-
-            try {
-                DescribeInstancesResult describeInstancesResult = ec2.describeInstances();
-                List<Reservation> reservations = describeInstancesResult.getReservations();
-                Set<Instance> instances = new HashSet<Instance>();
-
-                for (Reservation reservation : reservations) {
-                    instances.addAll(reservation.getInstances());
-                }
-                for (Instance instance : instances) {
-                    if(instance.getPublicDnsName().equals("ec2-54-157-232-222.compute-1.amazonaws.com"))
-                        continue;
-                    if (instance.getState().getName().equals("running"))
-                        forwardRequest(t, instance.getPublicDnsName());
-              }
-            } catch (AmazonServiceException ase) {
-                System.out.println("Caught Exception: " + ase.getMessage());
-                System.out.println("Reponse Status Code: " + ase.getStatusCode());
-                System.out.println("Error Code: " + ase.getErrorCode());
-                System.out.println("Request ID: " + ase.getRequestId());
-            }
-        }
-    }
-
     private static void forwardRequest(HttpExchange t, String urlString) throws IOException {
         String body = parseRequestBody(t.getRequestBody());
 
@@ -114,7 +107,7 @@ public class LoadBalancerAutoScaler {
         try{
             URL url = new URL("http://" + urlString + ":8000" + t.getRequestURI().toString());
             con = (HttpURLConnection) url.openConnection();
-            con.setRequestMethod("GET");
+            con.setRequestMethod("POST");
             con.setRequestProperty("Content-Type", "text/plain");
             con.setRequestProperty("Content-Length", Integer.toString(body.getBytes("UTF-8").length));
             con.setDoOutput(true);
@@ -122,7 +115,9 @@ public class LoadBalancerAutoScaler {
             op.write(body.getBytes("UTF-8"));
             op.close();
 
-            int status = con.getResponseCode();BufferedReader in = new BufferedReader(
+            int status = con.getResponseCode();
+
+            BufferedReader in = new BufferedReader(
                     new InputStreamReader(con.getInputStream()));
             String inputLine;
             StringBuffer content = new StringBuffer();
@@ -153,6 +148,25 @@ public class LoadBalancerAutoScaler {
         } finally {
             if (con != null) {
                 con.disconnect();
+            }
+        }
+    }
+
+    static class MyHandler implements HttpHandler {
+        @Override
+        public void handle(HttpExchange t) throws IOException {
+
+            try {
+                for (Instance instance : instances) {
+                    if (!instance.getPublicDnsName().equals("ec2-54-157-232-222.compute-1.amazonaws.com") &&
+                        instance.getState().getName().equals("running"))
+                        forwardRequest(t, instance.getPublicDnsName());
+              }
+            } catch (AmazonServiceException ase) {
+                System.out.println("Caught Exception: " + ase.getMessage());
+                System.out.println("Reponse Status Code: " + ase.getStatusCode());
+                System.out.println("Error Code: " + ase.getErrorCode());
+                System.out.println("Request ID: " + ase.getRequestId());
             }
         }
     }
