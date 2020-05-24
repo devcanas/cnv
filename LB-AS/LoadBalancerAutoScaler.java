@@ -7,8 +7,11 @@ import com.amazonaws.services.cloudwatch.AmazonCloudWatch;
 import com.amazonaws.services.ec2.AmazonEC2;
 import com.amazonaws.services.ec2.AmazonEC2ClientBuilder;
 import com.amazonaws.services.ec2.model.DescribeInstancesResult;
+import com.amazonaws.services.ec2.model.TerminateInstancesRequest;
 import com.amazonaws.services.ec2.model.Instance;
 import com.amazonaws.services.ec2.model.Reservation;
+import com.amazonaws.services.ec2.model.RunInstancesRequest;
+import com.amazonaws.services.ec2.model.RunInstancesResult;
 import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
@@ -44,7 +47,7 @@ public class LoadBalancerAutoScaler {
         while(true){
             for (Instance instance : instances) {
                 URL url = new URL("http://" + instance.getPublicDnsName() +":8000/ping");
-                con = (HttpURLConnection) url.openConnection();
+                HttpURLConnection con = (HttpURLConnection) url.openConnection();
                 con.setRequestMethod("GET");
                 int status = con.getResponseCode();
                 if(status != 200){
@@ -79,26 +82,37 @@ public class LoadBalancerAutoScaler {
         for (Reservation reservation : reservations) {
             instances.addAll(reservation.getInstances());
         }
-
     }
 
-    public static String parseRequestBody(InputStream is) throws IOException {
-        InputStreamReader isr =  new InputStreamReader(is,"utf-8");
-        BufferedReader br = new BufferedReader(isr);
 
-        // From now on, the right way of moving from bytes to utf-8 characters:
+    public static String newInstance()
+    {
+        System.out.println("Starting a new instance.");
+        RunInstancesRequest runInstancesRequest = new RunInstancesRequest();
 
-        int b;
-        StringBuilder buf = new StringBuilder(512);
-        while ((b = br.read()) != -1) {
-            buf.append((char) b);
+        runInstancesRequest.withImageId("ami-02f0faa2adb9c6f64")
+                .withInstanceType("t2.micro")
+                .withMinCount(1)
+                .withMaxCount(1)
+                .withKeyName("CNV-2020")
+                .withSecurityGroups("CNV-ssh+http");
+        RunInstancesResult runInstancesResult = ec2.runInstances(runInstancesRequest);
 
+        //Adding the instance to hashset of instances
+        instances.add(runInstancesResult.getReservation().getInstances().get(0));
+    }
+
+    public static void terminateInstance(String instanceId){
+        System.out.println("Terminating instance with id: " + instanceId);
+        TerminateInstancesRequest termInstanceReq = new TerminateInstancesRequest();
+        termInstanceReq.withInstanceIds(instanceId);
+        ec2.terminateInstances(termInstanceReq);
+
+        //Removing the instance from the hashset of instances
+        for(Instance instance: instances){
+            if(instance.getInstanceId().equals(instanceId))
+                instances.remove(instance);
         }
-
-        br.close();
-        isr.close();
-
-        return buf.toString();
     }
 
     private static void forwardRequest(HttpExchange t, String urlString) throws IOException {
@@ -170,6 +184,25 @@ public class LoadBalancerAutoScaler {
                 System.out.println("Request ID: " + ase.getRequestId());
             }
         }
+    }
+
+    public static String parseRequestBody(InputStream is) throws IOException {
+        InputStreamReader isr =  new InputStreamReader(is,"utf-8");
+        BufferedReader br = new BufferedReader(isr);
+
+        // From now on, the right way of moving from bytes to utf-8 characters:
+
+        int b;
+        StringBuilder buf = new StringBuilder(512);
+        while ((b = br.read()) != -1) {
+            buf.append((char) b);
+
+        }
+
+        br.close();
+        isr.close();
+
+        return buf.toString();
     }
 
 }
