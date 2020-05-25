@@ -7,7 +7,8 @@ import java.io.InputStream;
 import java.util.ArrayList;
 
 public class Parser {
-    public static ArrayList<String> parseRequestParams(String query){
+    public static ArrayList<String> parseRequestParams(String query)
+    {
         final String[] params = query.split("&");
 
         final ArrayList<String> newArgs = new ArrayList<>();
@@ -19,7 +20,8 @@ public class Parser {
         return newArgs;
     }
 
-    public static String parseRequestBody(InputStream is) throws IOException {
+    public static String parseRequestBody(InputStream is) throws IOException
+    {
         InputStreamReader isr =  new InputStreamReader(is,"utf-8");
         BufferedReader br = new BufferedReader(isr);
 

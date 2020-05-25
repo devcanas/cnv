@@ -13,7 +13,11 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class RequestForwarder {
-    public static boolean forwardRequest(HttpExchange t, String urlString) throws IOException {
+    /*
+        Creates a new request (similar to the one received) and forwards it to the chosen instance
+     */
+    public static boolean forwardRequest(HttpExchange t, String urlString) throws IOException
+    {
         String body = Parser.parseRequestBody(t.getRequestBody());
 
         HttpURLConnection con = null;
@@ -67,7 +71,11 @@ public class RequestForwarder {
         return true;
     }
 
-    public static void InvalidRequest(HttpExchange t){
+    /*
+        Return a 400 - Bad Request response
+     */
+    public static void invalidRequest(HttpExchange t)
+    {
         try {
 
             final Headers hdrs = t.getResponseHeaders();

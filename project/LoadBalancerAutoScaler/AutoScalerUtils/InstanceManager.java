@@ -30,7 +30,8 @@ public class InstanceManager {
         Main.instances.put(runInstancesResult.getReservation().getInstances().get(0), new InstanceState());
     }
 
-    public static void signalTermination(String instanceId){
+    public static void signalTermination(String instanceId)
+    {
         for(Map.Entry<Instance, InstanceState> entry : Main.instances.entrySet()){
             if(entry.getKey().getInstanceId().equals(instanceId)) {
                 entry.getValue().markAsToBeTerminated();
@@ -38,7 +39,8 @@ public class InstanceManager {
         }
     }
 
-    public static void terminateInstance(String instanceId){
+    public static void terminateInstance(String instanceId)
+    {
         System.out.println("Terminating instance with id: " + instanceId);
         TerminateInstancesRequest termInstanceReq = new TerminateInstancesRequest();
         termInstanceReq.withInstanceIds(instanceId);
@@ -51,7 +53,8 @@ public class InstanceManager {
         }
     }
 
-    public static void removeInstanceFromList(Instance instance){
+    public static void removeInstanceFromList(Instance instance)
+    {
         Main.instances.remove(instance);
     }
 

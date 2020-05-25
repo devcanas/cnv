@@ -27,7 +27,8 @@ public class Main {
     static public AmazonCloudWatch cloudWatch;
     static public HashMap<Instance, InstanceState> instances = new HashMap<>();
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception
+    {
         //Connects to Amazon and initializes instances hashMap
         init();
 
@@ -43,7 +44,8 @@ public class Main {
         System.out.println(server.getAddress().toString());
     }
 
-    private static void init() throws Exception {
+    private static void init() throws Exception
+    {
 
         AWSCredentials credentials = null;
         try {
@@ -61,6 +63,7 @@ public class Main {
         DescribeInstancesResult describeInstancesResult = ec2.describeInstances();
         List<Reservation> reservations = describeInstancesResult.getReservations();
 
+        //Fills the instance hasmMap with the current running instances except the Load Balancer and Auto Scaler instance
         for (Reservation reservation : reservations) {
             for(Instance instance: reservation.getInstances()){
                 boolean skipInstance = false;

@@ -1,38 +1,38 @@
 package LoadBalancerAutoScaler;
 
-import LoadBalancerAutoScaler.Main;
 import LoadBalancerAutoScaler.AutoScalerUtils.*;
-
-import com.amazonaws.services.ec2.model.Instance;
-import com.amazonaws.services.ec2.model.Reservation;
-import com.amazonaws.services.ec2.model.RunInstancesRequest;
-import com.amazonaws.services.ec2.model.RunInstancesResult;
-import com.amazonaws.services.ec2.model.TerminateInstancesRequest;
-import com.amazonaws.services.ec2.model.Tag;
-import java.util.Map;
-import java.util.Date;
-import java.util.List;
-
-import com.amazonaws.services.cloudwatch.AmazonCloudWatch;
-import com.amazonaws.services.cloudwatch.AmazonCloudWatchClientBuilder;
-import com.amazonaws.services.cloudwatch.model.Dimension;
+import LoadBalancerAutoScaler.Main;
 import com.amazonaws.services.cloudwatch.model.Datapoint;
+import com.amazonaws.services.cloudwatch.model.Dimension;
 import com.amazonaws.services.cloudwatch.model.GetMetricStatisticsRequest;
 import com.amazonaws.services.cloudwatch.model.GetMetricStatisticsResult;
+import com.amazonaws.services.ec2.model.Instance;
 
 import java.net.HttpURLConnection;
-import java.net.InetSocketAddress;
 import java.net.URL;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 public class AutoScaler {
 
-    public static void start() {
+    public static void start()
+    {
+        // Starts health check thread
         HealthCheckThread healthCheckThread = new HealthCheckThread();
         healthCheckThread.start();
+
+        // Start scalling pollicies thread
         ScallingPolliciesThread scallingPolliciesThread = new ScallingPolliciesThread();
         scallingPolliciesThread.start();
     }
-    static class HealthCheckThread extends Thread {
+
+    /*
+        Pings all running instances (except the Load Balancer and Auto Scaler instance) every 30 seconds.
+        If health check fails -> terminates instance, send the pending requests to other instances
+     */
+    static class HealthCheckThread extends Thread
+    {
         public void run() {
             while(true){
                 try{
@@ -51,7 +51,7 @@ public class AutoScaler {
                         int status = con.getResponseCode();
                         long finish = System.currentTimeMillis();
                         if(status != 200 || finish - start > 5000){
-                            System.out.println("Failed")
+                            System.out.println("Failed");
                             //Check if instance is runnning
                             //Terminate Instance
                             //Forward pending requests
@@ -66,7 +66,16 @@ public class AutoScaler {
             }
         }
     }
-
+    /*
+        Requests all running instances for its CPU Utilization (except the Load Balancer and Auto Scaler instance)
+        every 60 seconds.
+        Metrics:
+            Cpu Utilization from the last 3 minutes
+            Datapoints with period 1 minute
+        Average CPU Utilization of an instance:
+            50 % for AWS CPU Utilization value
+            50 % for pending requests costs
+     */
     static class ScallingPolliciesThread extends Thread
     {
         private static final int MINIMUM_INSTANCES = 1;
@@ -77,13 +86,17 @@ public class AutoScaler {
                 try {
                     Thread.sleep(60000);
                     double instanceTotal = 0;
+                    int instanceCount = 0;
                     long offsetInMilliseconds = 1000 * 60 * 3;
                     Dimension instanceDimension = new Dimension();
                     instanceDimension.setName("InstanceId");
                     for (Map.Entry<Instance, InstanceState> entry : Main.instances.entrySet()) {
                         String name = entry.getKey().getInstanceId();
-                        if(entry.getValue().isToTerminate() && entry.getValue().getPendingRequestListSize() == 0) {
+                        // If an instance to be terminated as finished its pending requests -> terminate it and discard its metrics
+                        if(entry.getValue().isToTerminate() && entry.getValue().getComputationLeft() == 0) {
                             InstanceManager.terminateInstance(name);
+                            instanceCount--;
+                            continue;
                         }
                         System.out.println("Instance: " + name);
                         instanceDimension.setValue(name);
@@ -99,20 +112,30 @@ public class AutoScaler {
                                 Main.cloudWatch.getMetricStatistics(request);
                         List<Datapoint> datapoints = getMetricStatisticsResult.getDatapoints();
                         double instanceCPUUtilization = 0;
-                        int aux = datapoints.size();
                         for (Datapoint dp : datapoints) {
+                            instanceCount++;
                             System.out.println("Average Value " + dp.getAverage());
                             instanceCPUUtilization += dp.getAverage();
                         }
+                        // If there are not any datapoints of the instance yet assume a CPU Utilization of 50% to prevent
+                        // auto scaler from terminating instances.
                         if(datapoints.size() == 0) {
                             instanceCPUUtilization += 50;
-                            aux = 1;
+                            instanceCount = 1;
                         }
-                        instanceCPUUtilization = (instanceCPUUtilization/aux + (entry.getValue().ComputationLeft() * 16.67))/2;
-                        instanceTotal += instanceCPUUtilization;
+                        // Normalized the computation left to percentage. Max Computation Left = 6
+                        float instancePendingRequestCost = entry.getValue().getComputationLeft() * (float) 16.67;
+
+                        instanceCPUUtilization = (instanceCPUUtilization/instanceCount + instancePendingRequestCost)/2;
                         System.out.println("Cpu Utilization for instance: " + name + " is : " + instanceCPUUtilization);
+
+                        // Total for all instances
+                        instanceTotal += instanceCPUUtilization;
                     }
+                    // Average of all instances
                     instanceTotal = instanceTotal/Main.instances.size();
+                    // If 0 instances running or less than 3 and overall cpu utlization higher than 70 -> launch new instance
+                    // Else if 3 instances running or more than 1 and overall cpu utilization lower than 40 -> signal instance termination
                     if(Main.instances.size() < MINIMUM_INSTANCES || (instanceTotal >= 70 && Main.instances.size() < MAXIMUM_INSTANCES)){
                         InstanceManager.newInstance();
                     }else if(Main.instances.size() > MAXIMUM_INSTANCES || (instanceTotal <= 40 && Main.instances.size() > MINIMUM_INSTANCES)) {

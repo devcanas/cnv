@@ -12,7 +12,7 @@ public class RequestCostCalculator {
     private static int maxFieldStoreCount = 5;
     private static int maxLoadCount = 5;
     private static int maxStoreCount = 5;
-    
+
     public static void updateMaxValue(){
         List<MetricItem> metrics = MetricLogger.getInstance().getLogs();
         for (MetricItem metric : metrics) {
@@ -37,7 +37,8 @@ public class RequestCostCalculator {
         }
     }
 
-    public static float computeRequestLoad(String strategy,String maxUnassignedEntries,String puzzleLines, String puzzleColumns, String puzzleName){
+    public static float computeRequestLoad(String strategy,String maxUnassignedEntries,String puzzleLines, String puzzleColumns, String puzzleName)
+    {
         updateMaxValue();
         float branchesTaken = (1 * 100) / maxBranchesTaken;
         float branchesNotTaken = (1 * 100) / maxBranchesNotTaken;
