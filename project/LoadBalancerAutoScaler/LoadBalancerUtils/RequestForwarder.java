@@ -8,6 +8,7 @@ import com.sun.net.httpserver.HttpHandler;
 import java.io.OutputStream;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
@@ -64,5 +65,23 @@ public class RequestForwarder {
             }
         }
         return true;
+    }
+
+    public static void InvalidRequest(HttpExchange t){
+        try {
+
+            final Headers hdrs = t.getResponseHeaders();
+
+            hdrs.add("Content-Type", "application/json");
+            hdrs.add("Access-Control-Allow-Origin", "*");
+            hdrs.add("Access-Control-Allow-Credentials", "true");
+            hdrs.add("Access-Control-Allow-Methods", "POST, GET, HEAD, OPTIONS");
+            hdrs.add("Access-Control-Allow-Headers",
+                    "Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
+
+            t.sendResponseHeaders(400, -1);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }

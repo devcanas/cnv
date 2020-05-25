@@ -29,7 +29,8 @@ class LoadBalancer implements HttpHandler {
         String puzzleName = newArgs.get(4);
 
         if(Integer.parseInt(puzzleLines) >= MAX_PUZZLE_LINES || Integer.parseInt(puzzleColumns) >= MAX_PUZZLE_COLUMNS){
-            //invalidRequest();
+            RequestForwarder.invalidRequest(t);
+            return;
         }
 
         System.out.println("Strategy: " + strategy);
