@@ -45,16 +45,20 @@
                                 InstanceManager.removeInstanceFromList(entry.getKey());
                                 continue;
                             }
+                            long start = System.currentTimeMillis();
                             URL url = new URL("http://" + entry.getKey().getPublicDnsName() +":8000/ping");
                             HttpURLConnection con = (HttpURLConnection) url.openConnection();
                             con.setRequestMethod("GET");
                             int status = con.getResponseCode();
-                            if(status != 200){
+                            long finish = System.currentTimeMillis();
+                            if(status != 200 || finish - start > 5000){
+                                System.out.println("Failed")
                                 //Check if instance is runnning
                                 //Terminate Instance
                                 //Forward pending requests
                                 //Remove instance from this.instances
                             }
+                            System.out.println("Instance : " + entry.getKey().getInstanceId() + " is okay.");
                         }
                         Thread.sleep(30000);
                     }catch (Exception e){
