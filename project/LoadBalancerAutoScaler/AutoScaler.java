@@ -32,7 +32,6 @@ public class AutoScaler {
         ScallingPolliciesThread scallingPolliciesThread = new ScallingPolliciesThread();
         scallingPolliciesThread.start();
     }
-
     static class HealthCheckThread extends Thread {
         public void run() {
             while(true){

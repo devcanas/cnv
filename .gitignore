@@ -5,3 +5,4 @@ workspace.xml
 *.class
 combinations*
 log.txt
+hist.txt

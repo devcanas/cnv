@@ -1,26 +1,44 @@
 package LoadBalancerAutoScaler.LoadBalancerUtils;
 
+import pt.ulisboa.tecnico.cnv.server.MetricItem;
+import pt.ulisboa.tecnico.cnv.server.MetricLogger;
+import java.util.List;
+
 public class RequestCostCalculator {
     
-    private static int maxBranchesTaken;
-    private static int maxBranchesNotTaken;
-    private static int maxFieldLoadCount;
-    private static int maxFieldStoreCount;
-    private static int maxLoadCount;
-    private static int maxStoreCount;
+    private static int maxBranchesTaken = 5;
+    private static int maxBranchesNotTaken = 5;
+    private static int maxFieldLoadCount = 5;
+    private static int maxFieldStoreCount = 5;
+    private static int maxLoadCount = 5;
+    private static int maxStoreCount = 5;
     
-    public void updateMaxValue(){
-        this.maxBranchesTaken = 5;
-        this.maxBranchesNotTaken = 5;
-        this.maxFieldLoadCount = 5;
-        this.maxFieldStoreCount = 5;
-        this.maxLoadCount = 5;
-        this.maxStoreCount = 5;
-        //Request Dynamo Db and Update
+    public static void updateMaxValue(){
+        List<MetricItem> metrics = MetricLogger.getInstance().getLogs();
+        for (MetricItem metric : metrics) {
+            if (maxBranchesTaken < metric.getBranchesTaken()) {
+                maxBranchesTaken = metric.getBranchesTaken();
+            }
+            if (maxBranchesNotTaken < metric.getBranchesNotTaken()) {
+                maxBranchesNotTaken = metric.getBranchesNotTaken();
+            }
+            if (maxFieldLoadCount < metric.getFieldLoadCount()) {
+                maxFieldLoadCount = metric.getFieldLoadCount();
+            }
+            if (maxFieldStoreCount < metric.getFieldStoreCount()) {
+                maxFieldStoreCount = metric.getFieldStoreCount();
+            }
+            if (maxLoadCount < metric.getLoadCount()) {
+                maxLoadCount = metric.getLoadCount();
+            }
+            if (maxStoreCount < metric.getStoreCount()) {
+                maxStoreCount = metric.getStoreCount();
+            }
+        }
     }
 
     public static float computeRequestLoad(String strategy,String maxUnassignedEntries,String puzzleLines, String puzzleColumns, String puzzleName){
-        this.updateMaxValue();
+        updateMaxValue();
         float branchesTaken = (1 * 100) / maxBranchesTaken;
         float branchesNotTaken = (1 * 100) / maxBranchesNotTaken;
         float fieldLoadCount = (1 * 100) / maxFieldLoadCount;
