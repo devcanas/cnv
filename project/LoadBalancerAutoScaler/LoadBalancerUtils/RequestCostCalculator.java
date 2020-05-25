@@ -1,7 +1,7 @@
 package LoadBalancerAutoScaler.LoadBalancerUtils;
 
-import pt.ulisboa.tecnico.cnv.server.MetricItem;
-import pt.ulisboa.tecnico.cnv.server.MetricLogger;
+import LoadBalancerAutoScaler.LoadBalancerUtils.MetricItem;
+import LoadBalancerAutoScaler.LoadBalancerUtils.MetricLogger;
 import java.util.List;
 
 public class RequestCostCalculator {

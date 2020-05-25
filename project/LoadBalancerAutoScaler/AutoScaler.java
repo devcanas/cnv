@@ -15,6 +15,7 @@ import java.net.URL;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.HashMap;
 
 public class AutoScaler {
 
@@ -37,6 +38,7 @@ public class AutoScaler {
     {
         Instance currentInstance = null;
         InstanceState currentInstanceState = null;
+        public HashMap<String, Integer> instanceFailures = new HashMap<>();
 
         public void run() {
             while(true){
@@ -68,12 +70,16 @@ public class AutoScaler {
                             //Forward pending requests
                             //Remove instance from this.instances
                         }
+                        instanceFailures.put(currentInstance.getInstanceId(), 0);
                         System.out.println("Instance : " + currentInstance.getInstanceId() + " is okay.");
                     }
                     Thread.sleep(30000);
                 }catch (Exception e){
                     System.out.println("Instance : " + currentInstance.getInstanceId() + " has failed.");
-                    InstanceManager.terminateInstance(currentInstance.getInstanceId());
+                    instanceFailures.put(currentInstance.getInstanceId(), instanceFailures.get(currentInstance.getInstanceId()) + 1);
+                    if(instanceFailures.get(currentInstance.getInstanceId()) >= 2){
+                        InstanceManager.terminateInstance(currentInstance.getInstanceId());
+                    }
                     //e.printStackTrace();
                 }
             }
@@ -104,13 +110,13 @@ public class AutoScaler {
                     instanceDimension.setName("InstanceId");
                     for (Map.Entry<Instance, InstanceState> entry : Main.instances.entrySet()) {
                         String name = entry.getKey().getInstanceId();
+                        System.out.println("Evaluating Instance: " + name);
                         // If an instance to be terminated as finished its pending requests -> terminate it and discard its metrics
                         if(entry.getValue().isToTerminate() && entry.getValue().getComputationLeft() == 0) {
                             InstanceManager.terminateInstance(name);
                             instanceCount--;
                             continue;
                         }
-                        System.out.println("Instance: " + name);
                         instanceDimension.setValue(name);
                         GetMetricStatisticsRequest request = new GetMetricStatisticsRequest()
                                 .withStartTime(new Date(new Date().getTime() - offsetInMilliseconds))
@@ -134,15 +140,14 @@ public class AutoScaler {
                             instanceCPUUtilization += 50;
                             instanceCount = 1;
                         }
-                        // Normalized the computation left to percentage. Max Computation Left = 6
-                        float instancePendingRequestCost = entry.getValue().getComputationLeft() * (float) 100;
+                        // Normalized the computation left to percentage
+                        float instancePendingRequestCost = entry.getValue().getComputationLeft() * (float) 100 / 6;
 
                         instanceCPUUtilization = (instanceCPUUtilization/instanceCount + instancePendingRequestCost)/2;
                         System.out.println("Cpu Utilization for instance: " + name + " is : " + instanceCPUUtilization);
 
                         // Total for all instances
                         instanceTotal += instanceCPUUtilization;
-                        Thread.sleep(60000);
                     }
                     // Average of all instances
                     if(Main.instances.size() >= MINIMUM_INSTANCES){
@@ -156,8 +161,7 @@ public class AutoScaler {
                     }else if(Main.instances.size() > MAXIMUM_INSTANCES || (instanceTotal <= 40 && Main.instances.size() > MINIMUM_INSTANCES)) {
                         InstanceManager.signalTermination(LoadBalancer.getLessLoadedInstance().getInstanceId());
                     }
-
-
+                    Thread.sleep(60000);
                 }catch (Exception e){
                     e.printStackTrace();
                 }

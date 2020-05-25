@@ -39,9 +39,9 @@ public class Main {
         server.start();
 
         //Starts the autoscaler that periodically performs the health checks and scalling pollicies
-        AutoScaler.start();
 
         System.out.println(server.getAddress().toString());
+        AutoScaler.start();
     }
 
     private static void init() throws Exception

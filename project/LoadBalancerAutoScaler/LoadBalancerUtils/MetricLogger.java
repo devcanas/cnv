@@ -1,4 +1,4 @@
-package LoadBalancerAutoScaler.LoadBalancerUtils;
+package pt.ulisboa.tecnico.cnv.server;
 
 import java.util.*; 
 
