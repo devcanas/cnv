@@ -1,32 +1,54 @@
 package LoadBalancerAutoScaler;
 
+import LoadBalancerAutoScaler.LoadBalancerUtils.*;
+import com.amazonaws.AmazonServiceException;
+import com.amazonaws.services.ec2.model.Instance;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import com.sun.net.httpserver.Headers;
 
 import java.io.IOException;
-import java.io.OutputStream;
-import java.io.InputStream;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Map;
 
-import com.amazonaws.services.ec2.model.Instance;
-import com.amazonaws.AmazonServiceException;
-
 class LoadBalancer implements HttpHandler {
+
+    private static final int MAX_PUZZLE_LINES = 25;
+    private static final int MAX_PUZZLE_COLUMNS = 25;
+
     @Override
     public void handle(HttpExchange t) throws IOException {
-        System.out.println("new request");
+
+        System.out.println("New request received: " + t.getRequestHeaders());
+
+        ArrayList<String> newArgs = Parser.parseRequestParams(t.getRequestURI().getQuery());
+
+        String strategy = newArgs.get(0);
+        String maxUnassignedEntries = newArgs.get(1);
+        String puzzleLines = newArgs.get(2);
+        String puzzleColumns = newArgs.get(3);
+        String puzzleName = newArgs.get(4);
+
+        if(Integer.parseInt(puzzleLines) >= MAX_PUZZLE_LINES || Integer.parseInt(puzzleColumns) >= MAX_PUZZLE_COLUMNS){
+            //invalidRequest();
+        }
+
+        System.out.println("Strategy: " + strategy);
+        System.out.println("maxUnassignedEntries: " + maxUnassignedEntries);
+        System.out.println("puzzleLines: " + puzzleLines);
+        System.out.println("puzzleColumns: " + puzzleColumns);
+        System.out.println("puzzleName: " + puzzleName);
+
+        //float load = computeRequestLoad(strategy, maxUnassignedEntries, puzzleLines, puzzleColumns, puzzleName);
+
         try {
             Instance chosenInstance = getLessLoadedInstance();
             InstanceState is = Main.instances.get(chosenInstance);
             is.addRequest(t);
-            boolean success = forwardRequest(t, chosenInstance.getPublicDnsName());
+            //is.addComputedRequestLoad(load)
+            boolean success = RequestForwarder.forwardRequest(t, chosenInstance.getPublicDnsName());
             if(success) {
                 Main.instances.get(chosenInstance).removeRequest(t);
+                //is.removeComputedRequestLoad(load);
             }
         } catch (AmazonServiceException ase) {
             System.out.println("Caught Exception: " + ase.getMessage());
@@ -34,78 +56,6 @@ class LoadBalancer implements HttpHandler {
             System.out.println("Error Code: " + ase.getErrorCode());
             System.out.println("Request ID: " + ase.getRequestId());
         }
-    }
-
-    public static String parseRequestBody(InputStream is) throws IOException {
-        InputStreamReader isr =  new InputStreamReader(is,"utf-8");
-        BufferedReader br = new BufferedReader(isr);
-
-        // From now on, the right way of moving from bytes to utf-8 characters:
-
-        int b;
-        StringBuilder buf = new StringBuilder(512);
-        while ((b = br.read()) != -1) {
-            buf.append((char) b);
-        }
-
-        br.close();
-        isr.close();
-
-        return buf.toString();
-    }
-
-    private static boolean forwardRequest(HttpExchange t, String urlString) throws IOException {
-        String body = parseRequestBody(t.getRequestBody());
-
-        HttpURLConnection con = null;
-        try {
-            URL url = new URL("http://" + urlString + ":8000" + t.getRequestURI().toString());
-            con = (HttpURLConnection) url.openConnection();
-            con.setRequestMethod("POST");
-            con.setRequestProperty("Content-Type", "text/plain");
-            con.setRequestProperty("Content-Length", Integer.toString(body.getBytes("UTF-8").length));
-            con.setDoOutput(true);
-            OutputStream op = con.getOutputStream();
-            op.write(body.getBytes("UTF-8"));
-            op.close();
-
-            int status = con.getResponseCode();
-
-            BufferedReader in = new BufferedReader(
-                    new InputStreamReader(con.getInputStream()));
-            String inputLine;
-            StringBuffer content = new StringBuffer();
-            while ((inputLine = in.readLine()) != null) {
-                content.append(inputLine);
-            }
-            in.close();
-
-            final Headers hdrs = t.getResponseHeaders();
-
-            hdrs.add("Content-Type", "application/json");
-
-            hdrs.add("Access-Control-Allow-Origin", "*");
-
-            hdrs.add("Access-Control-Allow-Credentials", "true");
-            hdrs.add("Access-Control-Allow-Methods", "POST, GET, HEAD, OPTIONS");
-            hdrs.add("Access-Control-Allow-Headers", "Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
-
-            System.out.println(content);
-
-            t.sendResponseHeaders(200, content.length());
-            OutputStream os = t.getResponseBody();
-            os.write(String.valueOf(content).getBytes());
-            os.close();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            return false;
-        } finally {
-            if (con != null) {
-                con.disconnect();
-            }
-        }
-        return true;
     }
 
     public static Instance getLessLoadedInstance(){
@@ -119,7 +69,7 @@ class LoadBalancer implements HttpHandler {
                 lowest = entry.getValue().getComputationLeft();
             }
         }
-        System.out.println("Instance chosen has id: " + chosenInstance.getInstanceId() + " and computation left : " + Main.instances.get(chosenInstance).getComputationLeft());
+        System.out.println("Instance chosen has id: " + chosenInstance.getInstanceId() + " and computation left (before the request): " + Main.instances.get(chosenInstance).getComputationLeft());
         return chosenInstance;
 
     }

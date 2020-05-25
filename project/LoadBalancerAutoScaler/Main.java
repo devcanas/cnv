@@ -27,21 +27,24 @@ import com.amazonaws.services.ec2.model.Tag;
 
 public class Main {
 
-    static AmazonEC2 ec2;
-    static AmazonCloudWatch cloudWatch;
-    static HashMap<Instance, InstanceState> instances = new HashMap<>();
+    static public AmazonEC2 ec2;
+    static public AmazonCloudWatch cloudWatch;
+    static public HashMap<Instance, InstanceState> instances = new HashMap<>();
 
     public static void main(String[] args) throws Exception {
+        //Connects to Amazon and initializes instances hashMap
         init();
-
-        AutoScaler.start();
-
-        AutoScaler.newInstance();
 
         HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
         server.createContext("/sudoku", new LoadBalancer());
+
         server.setExecutor(Executors.newCachedThreadPool());
         server.start();
+
+        //Starts the autoscaler that periodically performs the health checks and scalling pollicies
+        AutoScaler.start();
+
+        System.out.println(server.getAddress().toString());
     }
 
     private static void init() throws Exception {

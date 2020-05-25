@@ -1,6 +1,7 @@
 package LoadBalancerAutoScaler;
 
 import LoadBalancerAutoScaler.Main;
+import LoadBalancerAutoScaler.AutoScalerUtils.*;
 
 import com.amazonaws.services.ec2.model.Instance;
 import com.amazonaws.services.ec2.model.Reservation;
@@ -24,46 +25,6 @@ import java.net.InetSocketAddress;
 import java.net.URL;
 
 public class AutoScaler {
-
-    public static void newInstance()
-    {
-        System.out.println("Starting a new instance.");
-        RunInstancesRequest runInstancesRequest = new RunInstancesRequest();
-
-        runInstancesRequest.withImageId("ami-0fbea6706efb7b85c")
-                .withInstanceType("t2.micro")
-                .withMinCount(1)
-                .withMaxCount(1)
-                .withKeyName("CNV-2020")
-                .withSecurityGroupIds("sg-00269700b432f948a")
-                .withSubnetId("subnet-59807c78")
-                .withMonitoring(true);
-        RunInstancesResult runInstancesResult = Main.ec2.runInstances(runInstancesRequest);
-
-        //Adding the instance to hashset of instances
-        Main.instances.put(runInstancesResult.getReservation().getInstances().get(0), new InstanceState());
-    }
-
-    public static void signalTermination(String instanceId){
-        for(Map.Entry<Instance, InstanceState> entry : Main.instances.entrySet()){
-            if(entry.getKey().getInstanceId().equals(instanceId)) {
-                entry.getValue().markAsToBeTerminated();
-            }
-        }
-    }
-
-    public static void terminateInstance(String instanceId){
-        System.out.println("Terminating instance with id: " + instanceId);
-        TerminateInstancesRequest termInstanceReq = new TerminateInstancesRequest();
-        termInstanceReq.withInstanceIds(instanceId);
-        Main.ec2.terminateInstances(termInstanceReq);
-
-        //Removing the instance from the hashset of instances
-        for(Map.Entry<Instance, InstanceState> entry : Main.instances.entrySet()){
-            if(entry.getKey().getInstanceId().equals(instanceId))
-                Main.instances.remove(entry.getKey());
-        }
-    }
 
     public static void start() {
         HealthCheckThread healthCheckThread = new HealthCheckThread();
@@ -151,14 +112,14 @@ public class AutoScaler {
                         instanceTotal += instanceCPUUtilization;
                         System.out.println("Cpu Utilization for instance: " + name + " is : " + instanceCPUUtilization);
                         if(entry.getValue().isToTerminate() && entry.getValue().getPendingRequestListSize() == 0) {
-                            terminateInstance(name);
+                            InstanceManager.terminateInstance(name);
                         }
                     }
                     instanceTotal = instanceTotal/Main.instances.size();
                     if(Main.instances.size() < MINIMUM_INSTANCES || (instanceTotal >= 70 && Main.instances.size() < MAXIMUM_INSTANCES)){
-                        newInstance();
+                        InstanceManager.newInstance();
                     }else if(Main.instances.size() > MAXIMUM_INSTANCES || (instanceTotal <= 40 && Main.instances.size() > MINIMUM_INSTANCES)) {
-                        signalTermination(LoadBalancer.getLessLoadedInstance().getInstanceId());
+                        InstanceManager.signalTermination(LoadBalancer.getLessLoadedInstance().getInstanceId());
                     }
                     System.out.println("Total Instances CPU Utilization: " + instanceTotal);
                 }catch (Exception e){
