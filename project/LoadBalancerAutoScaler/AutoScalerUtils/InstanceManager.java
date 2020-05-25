@@ -51,4 +51,8 @@ public class InstanceManager {
         }
     }
 
+    public static void removeInstanceFromList(Instance instance){
+        Main.instances.remove(instance);
+    }
+
 }
