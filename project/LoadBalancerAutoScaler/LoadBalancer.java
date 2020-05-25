@@ -38,17 +38,18 @@ class LoadBalancer implements HttpHandler {
         System.out.println("puzzleColumns: " + puzzleColumns);
         System.out.println("puzzleName: " + puzzleName);
 
-        //float load = computeRequestLoad(strategy, maxUnassignedEntries, puzzleLines, puzzleColumns, puzzleName);
+        float load = RequestCostCalculator.computeRequestLoad(strategy, maxUnassignedEntries, puzzleLines, puzzleColumns, puzzleName);
+        System.out.println(load);
 
         try {
             Instance chosenInstance = getLessLoadedInstance();
             InstanceState is = Main.instances.get(chosenInstance);
             is.addRequest(t);
-            //is.addComputedRequestLoad(load)
+            is.addComputedRequestLoad(load);
             boolean success = RequestForwarder.forwardRequest(t, chosenInstance.getPublicDnsName());
             if(success) {
                 Main.instances.get(chosenInstance).removeRequest(t);
-                //is.removeComputedRequestLoad(load);
+                is.removeComputedRequestLoad(load);
             }
         } catch (AmazonServiceException ase) {
             System.out.println("Caught Exception: " + ase.getMessage());
@@ -61,7 +62,7 @@ class LoadBalancer implements HttpHandler {
     public static Instance getLessLoadedInstance(){
         Instance chosenInstance = null;
         //Max number of computation left per thread is 6
-        int lowest = 6;
+        float lowest = 10;
         for(Map.Entry<Instance, InstanceState> entry : Main.instances.entrySet()){
             System.out.println(entry.getKey().getInstanceId() + ": " + entry.getValue().getComputationLeft());
             if(!entry.getValue().isToTerminate() && entry.getValue().getComputationLeft() <= lowest){

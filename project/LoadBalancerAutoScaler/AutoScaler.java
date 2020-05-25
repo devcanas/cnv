@@ -41,25 +41,15 @@ public class AutoScaler {
                         if(entry.getKey().getPublicDnsName().equals("")){
                             continue;
                         }
-                        if(entry.getKey().getTags().size() > 0){
-                            boolean skipInstance = false;
-                            for(Tag tag: entry.getKey().getTags()){
-                                if(tag.getKey().equals("Name") && tag.getValue().equals("Load Balancer"))
-                                    skipInstance = true;
-                            }
-                            if(skipInstance)
-                                continue;
-                        }
                         URL url = new URL("http://" + entry.getKey().getPublicDnsName() +":8000/ping");
                         HttpURLConnection con = (HttpURLConnection) url.openConnection();
                         con.setRequestMethod("GET");
                         int status = con.getResponseCode();
                         if(status != 200){
                             //Check if instance is runnning
-                            //Stop instance if its not running
+                            //Terminate Instance
+                            //Forward pending requests
                             //Remove instance from this.instances
-                            //See if there needs to be another instance running
-                            //Launches new instance if needed
                         }
                     }
                     Thread.sleep(60000);
@@ -85,6 +75,9 @@ public class AutoScaler {
                     instanceDimension.setName("InstanceId");
                     for (Map.Entry<Instance, InstanceState> entry : Main.instances.entrySet()) {
                         String name = entry.getKey().getInstanceId();
+                        if(entry.getValue().isToTerminate() && entry.getValue().getPendingRequestListSize() == 0) {
+                            InstanceManager.terminateInstance(name);
+                        }
                         System.out.println("Instance: " + name);
                         instanceDimension.setValue(name);
                         GetMetricStatisticsRequest request = new GetMetricStatisticsRequest()
@@ -111,9 +104,6 @@ public class AutoScaler {
                         instanceCPUUtilization = (instanceCPUUtilization/aux + (entry.getValue().getPendingRequestListSize() * 18.3))/2;
                         instanceTotal += instanceCPUUtilization;
                         System.out.println("Cpu Utilization for instance: " + name + " is : " + instanceCPUUtilization);
-                        if(entry.getValue().isToTerminate() && entry.getValue().getPendingRequestListSize() == 0) {
-                            InstanceManager.terminateInstance(name);
-                        }
                     }
                     instanceTotal = instanceTotal/Main.instances.size();
                     if(Main.instances.size() < MINIMUM_INSTANCES || (instanceTotal >= 70 && Main.instances.size() < MAXIMUM_INSTANCES)){

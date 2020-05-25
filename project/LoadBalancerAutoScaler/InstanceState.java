@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class InstanceState {
-    int computationLeft;
+    float computationLeft;
     List<HttpExchange> pendingRequests = new ArrayList<>();
     boolean toTerminate = false;
 
@@ -15,12 +15,18 @@ public class InstanceState {
 
     public void addRequest(HttpExchange t){
         pendingRequests.add(t);
-        computationLeft++;
     }
 
     public void removeRequest(HttpExchange t){
         pendingRequests.remove(t);
-        computationLeft--;
+    }
+
+    public void addComputedRequestLoad(float load) {
+        computationLeft += load;
+    }
+
+    public void removeComputedRequestLoad(float load) {
+        computationLeft -= load;
     }
 
     public List<HttpExchange> getPendingRequestList(){
@@ -31,7 +37,7 @@ public class InstanceState {
         return this.pendingRequests.size();
     }
 
-    public int getComputationLeft() {
+    public float getComputationLeft() {
         return this.computationLeft;
     }
 
