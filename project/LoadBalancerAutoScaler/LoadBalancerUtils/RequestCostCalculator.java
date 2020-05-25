@@ -40,17 +40,41 @@ public class RequestCostCalculator {
     public static float computeRequestLoad(String strategy,String maxUnassignedEntries,String puzzleLines, String puzzleColumns, String puzzleName)
     {
         updateMaxValue();
-        float branchesTaken = (1 * 100) / maxBranchesTaken;
-        float branchesNotTaken = (1 * 100) / maxBranchesNotTaken;
-        float fieldLoadCount = (1 * 100) / maxFieldLoadCount;
-        float fieldStoreCount = (1 * 100) / maxFieldStoreCount;
-        float loadCount = (1 * 100) / maxLoadCount;
-        float storeCount = (1 * 100) / maxStoreCount;
+
+        // get metrics for similar requests
+        MetricItem item = new MetricItem();
+        item.setSolverStrategy(strategy);
+        item.setUnassigned(Integer.parseInt(maxUnassignedEntries));
+        item.setNCol(Integer.parseInt(puzzleLines));
+        item.setNLin(Integer.parseInt(puzzleColumns));
+        List<MetricItem> similarItems = MetricLogger.getInstance().getLogsSimilarTo(item);
+
+        float branchesTakenPredicted = 1, branchesNotTakenPredicted = 1, fieldLoadCountPredicted = 1;
+        float fieldStoreCountPredicted = 1, loadCountPredicted = 1, storeCountPredicted = 1;
+
+        for (MetricItem i : similarItems) {
+            branchesTakenPredicted += i.getBranchesTaken();
+            branchesNotTakenPredicted += i.getBranchesNotTaken();
+            fieldLoadCountPredicted += i.getFieldLoadCount();
+            fieldStoreCountPredicted += i.getFieldStoreCount();
+            loadCountPredicted += i.getLoadCount();
+            storeCountPredicted += i.getStoreCount();
+        }
+
+        int count = similarItems.size() > 0 ? similarItems.size() : 1;
+        float branchesTaken = normalized(branchesTakenPredicted / count, maxBranchesTaken);
+        float branchesNotTaken = normalized(branchesNotTakenPredicted / count, maxBranchesNotTaken);
+        float fieldLoadCount = normalized(fieldLoadCountPredicted / count, maxFieldLoadCount);
+        float fieldStoreCount = normalized(fieldStoreCountPredicted / count, maxFieldStoreCount);
+        float loadCount = normalized(loadCountPredicted / count, maxLoadCount);
+        float storeCount = normalized(storeCountPredicted / count, maxStoreCount);
         
         float totalLoad = (branchesTaken + branchesNotTaken + fieldLoadCount + fieldLoadCount + loadCount + storeCount) / 6;
 
         return totalLoad / 100;
     }
-    
-    
+
+    public static float normalized(float value, float maxValue) {
+        return (value * 100) / maxValue;
+    }
 }

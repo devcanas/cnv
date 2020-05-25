@@ -75,10 +75,10 @@ public class MetricLogger {
         if (unassigned != -1) {
             String val1 = ":val" + (++valCounter);
             // lower bound for unassigned
-            eav.put(val1, new AttributeValue().withN(String.valueOf(unassigned - 10)));
+            eav.put(val1, new AttributeValue().withN(String.valueOf(Math.floor(0.9*unassigned))));
             String val2 = ":val" + (++valCounter);
             // upper bound for unassigned
-            eav.put(val2, new AttributeValue().withN(String.valueOf(unassigned + 10)));
+            eav.put(val2, new AttributeValue().withN(String.valueOf(Math.floor(1.1*unassigned))));
             expression += valCounter > 1 ? " and " : " ";
             expression += "unassigned between " + val1 + " and " + val2;
         }
