@@ -73,19 +73,22 @@ public class AutoScaler {
                             System.out.println("Instance : " + currentInstance.getInstanceId() + " has failed.");
                             instanceFailures.put(currentInstance.getInstanceId(), instanceFailures.get(currentInstance.getInstanceId()) + 1);
                         }
-                        instanceFailures.put(currentInstance.getInstanceId(), 0);
-                        System.out.println("Instance : " + currentInstance.getInstanceId() + " is okay.");
                     }
                     Thread.sleep(30000);
                 }catch (Exception e){
                     System.out.println("Instance : " + currentInstance.getInstanceId() + " has failed.");
                     instanceFailures.put(currentInstance.getInstanceId(), instanceFailures.get(currentInstance.getInstanceId()) + 1);
                     if(instanceFailures.get(currentInstance.getInstanceId()) >= 2){
+                        System.out.println("here");
                         InstanceManager.terminateInstance(currentInstance.getInstanceId());
                     }
                     List<HttpExchange> pendingRequests = currentInstanceState.getPendingRequestList();
-                    for (HttpExchange req : pendingRequests) {
-                        RequestForwarder.forwardRequest(req, LoadBalancer.getLessLoadedInstance().getInstanceId());
+                    try{
+                        for (HttpExchange req : pendingRequests) {
+                            RequestForwarder.forwardRequest(req, LoadBalancer.getLessLoadedInstance().getInstanceId());
+                        }
+                    }catch (Exception f){
+                        f.printStackTrace();
                     }
                     //e.printStackTrace();
                 }
@@ -150,7 +153,7 @@ public class AutoScaler {
                         // Normalized the computation left to percentage
                         float instancePendingRequestCost = entry.getValue().getComputationLeft() * (float) 100 / 6;
 
-                        instanceCPUUtilization = (instanceCPUUtilization/instanceCount + instancePendingRequestCost)/2;
+                        instanceCPUUtilization = (instanceCPUUtilization/instanceCount * 0.75 + instancePendingRequestCost * 0.25);
                         System.out.println("Cpu Utilization for instance: " + name + " is : " + instanceCPUUtilization);
 
                         // Total for all instances
