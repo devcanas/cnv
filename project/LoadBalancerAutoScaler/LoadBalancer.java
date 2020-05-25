@@ -11,6 +11,7 @@ import java.io.OutputStream;
 import java.io.InputStream;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Map;
 
 import com.amazonaws.services.ec2.model.Instance;
 import com.amazonaws.AmazonServiceException;
@@ -18,12 +19,14 @@ import com.amazonaws.AmazonServiceException;
 class LoadBalancer implements HttpHandler {
     @Override
     public void handle(HttpExchange t) throws IOException {
-
+        System.out.println("new request");
         try {
-            for (Instance instance : Main.instances) {
-                if (!instance.getPublicDnsName().equals("ec2-52-90-115-66.compute-1.amazonaws.com") &&
-                        instance.getState().getName().equals("running"))
-                    forwardRequest(t, instance.getPublicDnsName());
+            Instance chosenInstance = getLessLoadedInstance();
+            InstanceState is = Main.instances.get(chosenInstance);
+            is.addRequest(t);
+            boolean success = forwardRequest(t, chosenInstance.getPublicDnsName());
+            if(success) {
+                Main.instances.get(chosenInstance).removeRequest(t);
             }
         } catch (AmazonServiceException ase) {
             System.out.println("Caught Exception: " + ase.getMessage());
@@ -43,7 +46,6 @@ class LoadBalancer implements HttpHandler {
         StringBuilder buf = new StringBuilder(512);
         while ((b = br.read()) != -1) {
             buf.append((char) b);
-
         }
 
         br.close();
@@ -52,7 +54,7 @@ class LoadBalancer implements HttpHandler {
         return buf.toString();
     }
 
-    private static void forwardRequest(HttpExchange t, String urlString) throws IOException {
+    private static boolean forwardRequest(HttpExchange t, String urlString) throws IOException {
         String body = parseRequestBody(t.getRequestBody());
 
         HttpURLConnection con = null;
@@ -97,10 +99,28 @@ class LoadBalancer implements HttpHandler {
 
         } catch (Exception e) {
             e.printStackTrace();
+            return false;
         } finally {
             if (con != null) {
                 con.disconnect();
             }
         }
+        return true;
+    }
+
+    public static Instance getLessLoadedInstance(){
+        Instance chosenInstance = null;
+        //Max number of computation left per thread is 6
+        int lowest = 6;
+        for(Map.Entry<Instance, InstanceState> entry : Main.instances.entrySet()){
+            System.out.println(entry.getKey().getInstanceId() + ": " + entry.getValue().getComputationLeft());
+            if(!entry.getValue().isToTerminate() && entry.getValue().getComputationLeft() <= lowest){
+                chosenInstance = entry.getKey();
+                lowest = entry.getValue().getComputationLeft();
+            }
+        }
+        System.out.println("Instance chosen has id: " + chosenInstance.getInstanceId() + " and computation left : " + Main.instances.get(chosenInstance).getComputationLeft());
+        return chosenInstance;
+
     }
 }

@@ -1,7 +1,10 @@
 package LoadBalancerAutoScaler;
 
 import LoadBalancerAutoScaler.LoadBalancer;
+import LoadBalancerAutoScaler.InstanceState;
 import com.amazonaws.AmazonClientException;
+import com.amazonaws.services.cloudwatch.AmazonCloudWatch;
+import com.amazonaws.services.cloudwatch.AmazonCloudWatchClientBuilder;
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.profile.ProfileCredentialsProvider;
@@ -15,39 +18,30 @@ import com.sun.net.httpserver.HttpServer;
 import java.net.HttpURLConnection;
 import java.net.InetSocketAddress;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.Executors;
+import com.amazonaws.services.ec2.model.Tag;
 
 public class Main {
 
     static AmazonEC2 ec2;
-    static Set<Instance> instances = new HashSet<Instance>();
+    static AmazonCloudWatch cloudWatch;
+    static HashMap<Instance, InstanceState> instances = new HashMap<>();
 
     public static void main(String[] args) throws Exception {
         init();
 
+        AutoScaler.start();
+
+        AutoScaler.newInstance();
+
         HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
         server.createContext("/sudoku", new LoadBalancer());
-        server.setExecutor(null); // creates a default executor
+        server.setExecutor(Executors.newCachedThreadPool());
         server.start();
-
-        while(true){
-            for (Instance instance : instances) {
-                URL url = new URL("http://" + instance.getPublicDnsName() +":8000/ping");
-                HttpURLConnection con = (HttpURLConnection) url.openConnection();
-                con.setRequestMethod("GET");
-                int status = con.getResponseCode();
-                if(status != 200){
-                    //Check if instance is runnning
-                    //Stop instance if its not running
-                    //Remove instance from this.instances
-                    //See if there needs to be another instance running
-                    //Launches new instance if needed
-                }
-            }
-            Thread.sleep(60000);
-        }
     }
 
     private static void init() throws Exception {
@@ -64,12 +58,27 @@ public class Main {
         }
 
         ec2 = AmazonEC2ClientBuilder.standard().withRegion("us-east-1").withCredentials(new AWSStaticCredentialsProvider(credentials)).build();
+        cloudWatch = AmazonCloudWatchClientBuilder.standard().withRegion("us-east-1").withCredentials(new AWSStaticCredentialsProvider(credentials)).build();
         DescribeInstancesResult describeInstancesResult = ec2.describeInstances();
         List<Reservation> reservations = describeInstancesResult.getReservations();
 
         for (Reservation reservation : reservations) {
-            instances.addAll(reservation.getInstances());
+            for(Instance instance: reservation.getInstances()){
+                boolean skipInstance = false;
+                if(instance.getTags().size() > 0) {
+                    for (Tag tag : instance.getTags()) {
+                        if (tag.getKey().equals("Name") && tag.getValue().equals("Load Balancer"))
+                            skipInstance = true;
+                    }
+                }
+                if (skipInstance)
+                    continue;
+                if(instance.getState().getName().equals("running")) {
+                    instances.put(instance, new InstanceState());
+                }
+            }
         }
+
     }
 
 }
