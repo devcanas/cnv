@@ -109,7 +109,7 @@
                                 instanceCPUUtilization += 50;
                                 aux = 1;
                             }
-                            instanceCPUUtilization = (instanceCPUUtilization/aux + (entry.getValue().getPendingRequestListSize() * 18.3))/2;
+                            instanceCPUUtilization = (instanceCPUUtilization/aux + (entry.getValue().ComputationLeft() * 16.67))/2;
                             instanceTotal += instanceCPUUtilization;
                             System.out.println("Cpu Utilization for instance: " + name + " is : " + instanceCPUUtilization);
                         }
