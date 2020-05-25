@@ -1,7 +1,9 @@
 package LoadBalancerAutoScaler;
 
 import LoadBalancerAutoScaler.AutoScalerUtils.*;
+import LoadBalancerAutoScaler.LoadBalancerUtils.RequestForwarder;
 import LoadBalancerAutoScaler.Main;
+import LoadBalancerAutoScaler.LoadBalancer;
 import com.amazonaws.services.cloudwatch.model.Datapoint;
 import com.amazonaws.services.cloudwatch.model.Dimension;
 import com.amazonaws.services.cloudwatch.model.GetMetricStatisticsRequest;
@@ -11,6 +13,7 @@ import com.amazonaws.services.ec2.model.DescribeInstancesResult;
 import com.amazonaws.services.ec2.model.Reservation;
 
 import java.net.HttpURLConnection;
+import com.sun.net.httpserver.HttpExchange;
 import java.net.URL;
 import java.util.Date;
 import java.util.List;
@@ -63,12 +66,12 @@ public class AutoScaler {
                         con.setRequestMethod("GET");
                         con.setConnectTimeout(5000); //set timeout to 5 seconds
                         int status = con.getResponseCode();
-                        if(status != 200){
-                            System.out.println("Failed");
-                            //Check if instance is runnning
-                            //Terminate Instance
-                            //Forward pending requests
-                            //Remove instance from this.instances
+                        if(status == 200){
+                            instanceFailures.put(currentInstance.getInstanceId(), 0);
+                            System.out.println("Instance : " + currentInstance.getInstanceId() + " is okay.");
+                        } else {
+                            System.out.println("Instance : " + currentInstance.getInstanceId() + " has failed.");
+                            instanceFailures.put(currentInstance.getInstanceId(), instanceFailures.get(currentInstance.getInstanceId()) + 1);
                         }
                         instanceFailures.put(currentInstance.getInstanceId(), 0);
                         System.out.println("Instance : " + currentInstance.getInstanceId() + " is okay.");
@@ -79,6 +82,10 @@ public class AutoScaler {
                     instanceFailures.put(currentInstance.getInstanceId(), instanceFailures.get(currentInstance.getInstanceId()) + 1);
                     if(instanceFailures.get(currentInstance.getInstanceId()) >= 2){
                         InstanceManager.terminateInstance(currentInstance.getInstanceId());
+                    }
+                    List<HttpExchange> pendingRequests = currentInstanceState.getPendingRequestList();
+                    for (HttpExchange req : pendingRequests) {
+                        RequestForwarder.forwardRequest(req, LoadBalancer.getLessLoadedInstance().getInstanceId());
                     }
                     //e.printStackTrace();
                 }
