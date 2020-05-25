@@ -16,7 +16,7 @@ public class InstanceManager {
         System.out.println("Starting a new instance.");
         RunInstancesRequest runInstancesRequest = new RunInstancesRequest();
 
-        runInstancesRequest.withImageId("ami-0fbea6706efb7b85c")
+        runInstancesRequest.withImageId("ami-0f5279a66aa851ebc")
                 .withInstanceType("t2.micro")
                 .withMinCount(1)
                 .withMaxCount(1)
@@ -28,6 +28,8 @@ public class InstanceManager {
 
         //Adding the instance to hashset of instances
         Main.instances.put(runInstancesResult.getReservation().getInstances().get(0), new InstanceState());
+        System.out.println("Instance DNS: " + runInstancesResult.getReservation().getInstances().get(0).getPublicDnsName());
+        System.out.println("New instance add. Current Instances Size: " + Main.instances.size());
     }
 
     public static void signalTermination(String instanceId)

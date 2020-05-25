@@ -7,6 +7,8 @@ import com.amazonaws.services.cloudwatch.model.Dimension;
 import com.amazonaws.services.cloudwatch.model.GetMetricStatisticsRequest;
 import com.amazonaws.services.cloudwatch.model.GetMetricStatisticsResult;
 import com.amazonaws.services.ec2.model.Instance;
+import com.amazonaws.services.ec2.model.DescribeInstancesResult;
+import com.amazonaws.services.ec2.model.Reservation;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -33,35 +35,46 @@ public class AutoScaler {
      */
     static class HealthCheckThread extends Thread
     {
+        Instance currentInstance = null;
+        InstanceState currentInstanceState = null;
+
         public void run() {
             while(true){
                 try{
                     for (Map.Entry<Instance, InstanceState> entry : Main.instances.entrySet()) {
-                        if(entry.getKey().getPublicDnsName().equals("")){
-                            continue;
+                        currentInstance = entry.getKey();
+                        currentInstanceState = entry.getValue();
+                        if(currentInstance.getPublicDnsName().equals("")){
+                            DescribeInstancesResult describeInstancesResult = Main.ec2.describeInstances();
+                            List<Reservation> reservations = describeInstancesResult.getReservations();
+                            for (Reservation reservation : reservations) {
+                                for (Instance instance : reservation.getInstances()) {
+                                    if(instance.getInstanceId().equals(currentInstance.getInstanceId())){
+                                        InstanceState is = Main.instances.remove(currentInstance);
+                                        Main.instances.put(instance, is);
+                                    }
+                                }
+                            }
                         }
-                        if(!entry.getKey().getState().getName().equals("running")){
-                            InstanceManager.removeInstanceFromList(entry.getKey());
-                            continue;
-                        }
-                        long start = System.currentTimeMillis();
-                        URL url = new URL("http://" + entry.getKey().getPublicDnsName() +":8000/ping");
+                        URL url = new URL("http://" + currentInstance.getPublicDnsName() +":8000/ping");
                         HttpURLConnection con = (HttpURLConnection) url.openConnection();
                         con.setRequestMethod("GET");
+                        con.setConnectTimeout(5000); //set timeout to 5 seconds
                         int status = con.getResponseCode();
-                        long finish = System.currentTimeMillis();
-                        if(status != 200 || finish - start > 5000){
+                        if(status != 200){
                             System.out.println("Failed");
                             //Check if instance is runnning
                             //Terminate Instance
                             //Forward pending requests
                             //Remove instance from this.instances
                         }
-                        System.out.println("Instance : " + entry.getKey().getInstanceId() + " is okay.");
+                        System.out.println("Instance : " + currentInstance.getInstanceId() + " is okay.");
                     }
                     Thread.sleep(30000);
                 }catch (Exception e){
-                    e.printStackTrace();
+                    System.out.println("Instance : " + currentInstance.getInstanceId() + " has failed.");
+                    InstanceManager.terminateInstance(currentInstance.getInstanceId());
+                    //e.printStackTrace();
                 }
             }
         }
@@ -84,7 +97,6 @@ public class AutoScaler {
         public void run(){
             while(true) {
                 try {
-                    Thread.sleep(60000);
                     double instanceTotal = 0;
                     int instanceCount = 0;
                     long offsetInMilliseconds = 1000 * 60 * 3;
@@ -114,7 +126,6 @@ public class AutoScaler {
                         double instanceCPUUtilization = 0;
                         for (Datapoint dp : datapoints) {
                             instanceCount++;
-                            System.out.println("Average Value " + dp.getAverage());
                             instanceCPUUtilization += dp.getAverage();
                         }
                         // If there are not any datapoints of the instance yet assume a CPU Utilization of 50% to prevent
@@ -124,16 +135,20 @@ public class AutoScaler {
                             instanceCount = 1;
                         }
                         // Normalized the computation left to percentage. Max Computation Left = 6
-                        float instancePendingRequestCost = entry.getValue().getComputationLeft() * (float) 16.67;
+                        float instancePendingRequestCost = entry.getValue().getComputationLeft() * (float) 100;
 
                         instanceCPUUtilization = (instanceCPUUtilization/instanceCount + instancePendingRequestCost)/2;
                         System.out.println("Cpu Utilization for instance: " + name + " is : " + instanceCPUUtilization);
 
                         // Total for all instances
                         instanceTotal += instanceCPUUtilization;
+                        Thread.sleep(60000);
                     }
                     // Average of all instances
-                    instanceTotal = instanceTotal/Main.instances.size();
+                    if(Main.instances.size() >= MINIMUM_INSTANCES){
+                        instanceTotal = instanceTotal/Main.instances.size();
+                        System.out.println("Total Instances CPU Utilization: " + instanceTotal);
+                    }
                     // If 0 instances running or less than 3 and overall cpu utlization higher than 70 -> launch new instance
                     // Else if 3 instances running or more than 1 and overall cpu utilization lower than 40 -> signal instance termination
                     if(Main.instances.size() < MINIMUM_INSTANCES || (instanceTotal >= 70 && Main.instances.size() < MAXIMUM_INSTANCES)){
@@ -141,7 +156,8 @@ public class AutoScaler {
                     }else if(Main.instances.size() > MAXIMUM_INSTANCES || (instanceTotal <= 40 && Main.instances.size() > MINIMUM_INSTANCES)) {
                         InstanceManager.signalTermination(LoadBalancer.getLessLoadedInstance().getInstanceId());
                     }
-                    System.out.println("Total Instances CPU Utilization: " + instanceTotal);
+
+
                 }catch (Exception e){
                     e.printStackTrace();
                 }

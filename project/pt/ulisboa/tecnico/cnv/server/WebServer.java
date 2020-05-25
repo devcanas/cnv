@@ -106,10 +106,15 @@ public class WebServer {
 			// Solve sudoku puzzle
 			JSONArray solution = s.solveSudoku();
 
+
 			// saves metrics to DynamoDB
-			MetricItem item = populateMetrics(ap, threadMetrics);
-			MetricLogger.getInstance().log(item);
-			
+			try{
+				MetricItem item = populateMetrics(ap, threadMetrics);
+				MetricLogger.getInstance().log(item);
+			}catch (Exception e){
+				e.printStackTrace();
+			}
+
 			// Send response to browser.
 			final Headers hdrs = t.getResponseHeaders();
 
