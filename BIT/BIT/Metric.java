@@ -1,7 +1,7 @@
 package BIT;
 
 public class Metric {
-    int totalBranches, branchPC, branchNumber, loadcount, storecount, fieldloadcount, fieldstorecount;
+    int branchPC, totalBranches, branchNumber, loadcount, storecount, fieldloadcount, fieldstorecount;
     String methodName, className;
     StatisticsBranch[] branchInfo;
 
@@ -12,32 +12,32 @@ public class Metric {
 
     public int getTotalBranches() { return totalBranches; }
 
+    enum Branch { TAKEN, NOT_TAKEN }
+    private int sum(Branch b) {
+        int total = 0;
+        for (int i = 0; i < branchInfo.length; i++) {
+            if (branchInfo[i] != null) {
+                total += b.equals(Branch.TAKEN) 
+                    ? branchInfo[i].taken_
+                    : branchInfo[i].not_taken_;
+            }
+        }
+        return total;
+    }
+
+    public int getTotalBranchesTaken() { return sum(Branch.TAKEN); }
+    public int getTotalBranchesNotTaken() { return sum(Branch.NOT_TAKEN); }
+    public int getFieldLoadCount() { return fieldloadcount; }
+    public int getFieldStoreCount() { return fieldstorecount; }
+    public int getLoadCount() { return loadcount; }
+    public int getStoreCount() { return storecount; }
+
     public void reset(){
         branchInfo = new StatisticsBranch[totalBranches];
         fieldloadcount = 0;
         fieldstorecount = 0;
         storecount = 0;
         loadcount = 0;
-    }
-
-    public String toString(){
-        String result = "Branch summary:\n";
-        result += "CLASS NAME" + '\t' + "METHOD" + '\t' + "PC" + '\t' + "TAKEN" + '\t' + "NOT_TAKEN\n";
-        result += branchInfo.length + "\n";
-
-        for (int i = 0; i < branchInfo.length; i++) {
-            if (branchInfo[i] != null) {
-                result += branchInfo[i].print();
-            }
-        }
-
-        result += "Load Store summary:\n";
-        result += "Field load:    " + fieldloadcount + '\n';
-        result += "Field store:   " + fieldstorecount + '\n';
-        result += "Regular load:  " + loadcount + '\n';
-        result += "Regular store: " + storecount + '\n';
-
-        return result;
     }
 
     public void setMethodName(String name){

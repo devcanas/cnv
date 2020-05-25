@@ -19,6 +19,10 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.concurrent.Executors;
+import java.util.UUID;
+
+import pt.ulisboa.tecnico.cnv.server.MetricLogger;
+import pt.ulisboa.tecnico.cnv.server.MetricItem;
 
 public class WebServer {
 
@@ -65,7 +69,7 @@ public class WebServer {
 
 			CPUUsage threadMetrics = new CPUUsage();
 
-			System.out.println(t.getRequestHeaders());
+			//System.out.println(t.getRequestHeaders());
 
 			// Get the query.
 			final String query = t.getRequestURI().getQuery();
@@ -102,9 +106,10 @@ public class WebServer {
 			// Solve sudoku puzzle
 			JSONArray solution = s.solveSudoku();
 
-			logRequestMetrics(threadMetrics);
-			threadMetrics.reset();
-
+			// saves metrics to DynamoDB
+			MetricItem item = populateMetrics(ap, threadMetrics);
+			MetricLogger.getInstance().log(item);
+			
 			// Send response to browser.
 			final Headers hdrs = t.getResponseHeaders();
 
@@ -134,18 +139,20 @@ public class WebServer {
 		}
 	}
 
-	public static void logRequestMetrics(CPUUsage threadMetrics) {
-		// gets the working dir to save the logs to
-		String dir = System.getProperty("user.dir");
-
-		// logs metrics
-		try {
-			Writer fileWriter = new FileWriter(dir + "/log.txt", true);
-			fileWriter.write(threadMetrics.toString());
-			fileWriter.write("\n==========\n");
-			fileWriter.close();
-		} catch (IOException e) {
-			System.out.print(e.getStackTrace());
-		}
+	public static MetricItem populateMetrics(SolverArgumentParser ap, CPUUsage tm) {
+		MetricItem item = new MetricItem();
+		item.setId(UUID.randomUUID().toString());
+		item.setBranchesTaken(tm.getMetrics().getTotalBranchesTaken());
+		item.setBranchesNotTaken(tm.getMetrics().getTotalBranchesNotTaken());
+		item.setFieldLoadCount(tm.getMetrics().getFieldLoadCount());
+		item.setFieldStoreCount(tm.getMetrics().getFieldStoreCount());
+		item.setLoadCount(tm.getMetrics().getLoadCount());
+		item.setStoreCount(tm.getMetrics().getStoreCount());
+		item.setSolverStrategy(ap.getSolverStrategy().toString());
+		item.setUnassigned(ap.getUn());
+		item.setNCol(ap.getN1());
+		item.setNLin(ap.getN2());
+		tm.reset();
+		return item;
 	}
 }

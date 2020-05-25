@@ -92,6 +92,11 @@ public class CPUUsage {
         return result;
     }
 
+    public Metric getMetrics() {
+        long id = Thread.currentThread().getId();
+        return metrics.get(id);
+    }
+
     public static synchronized void setBranchClassName(String name)
     {
         Metric m = metrics.get(Thread.currentThread().getId());
