@@ -69,7 +69,7 @@ public class AutoScaler {
                         if(status == 200){
                             instanceFailures.put(currentInstance.getInstanceId(), 0);
                             System.out.println("Instance : " + currentInstance.getInstanceId() + " is okay.");
-                        } else {
+                        }else{
                             System.out.println("Instance : " + currentInstance.getInstanceId() + " has failed.");
                             instanceFailures.put(currentInstance.getInstanceId(), instanceFailures.get(currentInstance.getInstanceId()) + 1);
                         }
